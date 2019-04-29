@@ -1,0 +1,65 @@
+#racecar-flex-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 175px;
+
+   
+}
+
+#racecar-card-container{
+    position: absolute;
+    height: 100%;
+}
+
+.card {
+    width:280px;
+    height: 500px;
+    border: solid 1px black;
+}
+
+.transition {
+    transition: width 2s, height 2s, transform 2s;
+    transform: rotate(-40deg);
+}
+
+.card-1 {
+    position: relative;
+    background-color: green;
+    z-index: 300;
+    
+}
+
+.card-2 {
+    position: relative;
+    background-color: red;
+    z-index: 200;
+    top: -518px;
+    left: 16px;
+}
+
+
+.card-3 {
+    position: relative;
+    background-color: blue;
+    z-index: 100;
+    margin-top: -1035px;
+    left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+}
