@@ -1,15 +1,23 @@
 #racecar-flex-card-container {
     display: flex;
+    position: absolute;
+
     justify-content: center;
-    margin-top: 175px;
+    /* margin-top: 175px; */
+    flex-direction: row;
+    width:100%;
+    flex-wrap: wrap;
+    align-content: center;
+    /* align-items: center; */
+    height: 100%;
 
    
 }
 
-#racecar-card-container{
+/* #racecar-card-container{
     position: absolute;
     height: 100%;
-}
+} */
 
 .card {
     width:280px;
@@ -26,6 +34,8 @@
     position: relative;
     background-color: green;
     z-index: 300;
+    top: 525px;
+    left: -30px;
     
 }
 
@@ -33,8 +43,8 @@
     position: relative;
     background-color: red;
     z-index: 200;
-    top: -518px;
-    left: 16px;
+    top: 0px;
+    left: 0px;
 }
 
 
@@ -42,7 +52,7 @@
     position: relative;
     background-color: blue;
     z-index: 100;
-    margin-top: -1035px;
+    top: -525px;
     left: 30px;
 }
 
