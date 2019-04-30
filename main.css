@@ -14,10 +14,10 @@
    
 }
 
-/* #racecar-card-container{
-    position: absolute;
-    height: 100%;
-} */
+#racecar-card-container{
+    padding: 50px;
+    width: auto;
+}
 
 .card {
     width:280px;
@@ -32,7 +32,7 @@
 
 .card-1 {
     position: relative;
-    background-color: green;
+    background-color: lightgoldenrodyellow;
     z-index: 300;
     top: 525px;
     left: -30px;
@@ -41,7 +41,7 @@
 
 .card-2 {
     position: relative;
-    background-color: red;
+    background-color: lightcoral;
     z-index: 200;
     top: 0px;
     left: 0px;
@@ -50,7 +50,7 @@
 
 .card-3 {
     position: relative;
-    background-color: blue;
+    background-color: lightskyblue;
     z-index: 100;
     top: -525px;
     left: 30px;
