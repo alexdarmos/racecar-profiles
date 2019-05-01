@@ -1,7 +1,7 @@
 $(() => {
 
      let cardCounter = 0;
-     cardCounterOpposite=0;
+     // cardCounterOpposite=0;
      let released = false;
      let targetPosition = null;
      let target = null;
@@ -49,6 +49,7 @@ $(() => {
 
      function isReleased() {
           released = true;
+          console.log(cardCounter);
 
           if (released === true && targetPosition <= 90) {
                cardCounter++;
@@ -63,7 +64,7 @@ $(() => {
                     $(target).css({ "left": `${30}px`, "top": `${-23}px`, "z-index": 100 });
                     $(prevTarget).css({ "left": `${0}px`, "top": `${500}px`, "z-index": 200 });
                     $(target).next().css({ "left": `${-30}px`, "top": `${-479}px`, "z-index": 300 });
-               } else {
+               } else if (cardCounter === 3) {
                     $(target).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
                     $(target).prev().css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
                     $(prevTarget).prev().css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
@@ -72,18 +73,18 @@ $(() => {
                }
           }
 
-          if (released === true && targetPosition >= 370){
-               cardCounterOpposite++;
-               if (cardCounterOpposite === 1) {
+          if (released === true && targetPosition >= 300){
+               cardCounter--;
+               if (cardCounter === -1) {
                     $(target).css({ "left": `${30}px`, "top": `${480}px`, "z-index": 100 });
                     $(target).next().css({ "left": `${-30}px`, "top": `${23}px`, "z-index": 200 });
                     $(nextTarget).next().css({ "left": `${-30}px`, "top": `${-479}px`, "z-index": 300 });
 
-               } else if (cardCounterOpposite === 2) {
+               } else if (cardCounter === -2) {
                     $(target).css({ "left": `${30}px`, "top": `${-23}px`, "z-index": 100 });
                     $(prevTarget).css({ "left": `${0}px`, "top": `${500}px`, "z-index": 200 });
                     $(target).next().css({ "left": `${-30}px`, "top": `${-479}px`, "z-index": 300 });
-               } else {
+               } else if (cardCounter === -3) {
                     $(target).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
                     $(target).prev().css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
                     $(prevTarget).prev().css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
