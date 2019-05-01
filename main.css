@@ -1,10 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    width:100%;
+    margin: 0px;
+}
+
 #racecar-flex-card-container {
     display: flex;
     position: absolute;
     top: 0px;
     left: 0px;
     height: 100%;
-    width:100%;
+    /* width:100%; */
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,7 +26,8 @@
 
 .card {
     display: flex;
-    /* flex-direction: column; */
+    justify-content: center;
+    flex-direction: column;
     width:280px;
     height: 500px;
     /* border: solid 1px black; */
@@ -36,16 +45,61 @@
 
 #popup-container {
     display: none;
-    position: absolute;
-    width: 100%;
+    margin-top: 5%;
+    flex-direction: column;
+    width: 350px;
     height: 80%;
-    background-color: darkgray;
+    background-color: #F8F8F8;
     z-index: 1000;
-    left: 0;
-    top: 80px;
     opacity: 0.98;
+    overflow-x: scroll;
+    border: solid 1px black;
     padding: 5px;
-    overflow: scroll;
+}
+
+#exit-button {
+    height: 25px;
+    width: 25px;
+    /* align-self: flex-end; */
+    padding: 20px;
+}
+
+.details-button {
+    height: auto;
+    width: 125px;
+    opacity: .8;
+    align-self: center;
+}
+
+.details-button:hover {
+    background-color: white;
+    opacity: .5;
+}
+
+.mod-parts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.mod-part-sub-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 35px;
+}
+
+.reverse-row {
+    flex-direction: row-reverse;
+}
+
+.icon img {
+    height: 75px;
+    /* width: auto; */
+}
+
+.description {
+    height: auto;
+    /* width: 250px; */
 
 }
 
@@ -56,13 +110,14 @@
 
 .car-title {
     color: white;
-    font-size: 40px;
-    align-self: flex-end;
+    font-size: 53px;
+    align-self: center;
+    opacity: .8;
+
 }
 
 .card-1 {
     position: relative;
-    /* background-color: lightgoldenrodyellow; */
     background-image: url('assets/Wing-small.jpg');
     z-index: 300;
     top: 525px;
@@ -83,7 +138,8 @@
 
 .card-3 {
     position: relative;
-    background-color: lightskyblue;
+    background-image: url('assets/ats-small.jpg');
+    background-size: cover;
     z-index: 100;
     top: -525px;
     left: 30px;
