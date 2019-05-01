@@ -44,9 +44,6 @@ $(() => {
           }
      }
 
-
-
-
      $(`.card`).on("touchstart", function (e) {
           targetPosition = e.targetTouches[0].pageX;
      }).on("touchmove", function (e) {
@@ -60,25 +57,5 @@ $(() => {
           isReleased();
      })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-     // if (cardCounter === 0) {
-     //      $(`.card.card-2`).unbind("touchstart touchmove touchend");
-     // }
-     // if (cardCounter === 1) {
-     //      $(`.card.card-1`).unbind("touchstart touchmove touchend");
-     //      $(`.card.card-2`).bind("touchstart touchmove touchend");
-     // }
 })
 
