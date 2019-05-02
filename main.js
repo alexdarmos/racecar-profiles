@@ -1,13 +1,14 @@
 $(() => {
 
      let cardCounter = 0;
-     // cardCounterOpposite=0;
      let released = false;
-     let targetPosition = null;
+     let targetPositionX = null;
      let target = null;
      let nextTarget = null;
      let prevTarget = null;
      let selected = null;
+     let newPosition = 0;
+     let targetLeft = null;
      let carProfiles = [
           {
                title: "snowbalt",
@@ -41,7 +42,7 @@ $(() => {
      console.log(cardCounter);
 
      function isMoving() {
-          let newPosition = targetPosition - 280;
+          newPosition = targetPositionX - 280;
           $(target).css("left", newPosition);
           // console.log(targetPosition);
 
@@ -51,10 +52,8 @@ $(() => {
           released = true;
           console.log(cardCounter);
 
-          if (released === true && targetPosition <= 90) {
+          if (released === true && targetPositionX <= 90 || targetPositionX >= 300 ) {
                cardCounter++;
-
-
                if (cardCounter === 1) {
                     $(target).css({ "left": `${30}px`, "top": `${480}px`, "z-index": 100 });
                     $(nextTarget).next().css({ "left": `${0}px`, "top": `${-500}px`, "z-index": 200 });
@@ -73,29 +72,17 @@ $(() => {
                }
           }
 
-          if (released === true && targetPosition >= 300){
-               cardCounter--;
-               if (cardCounter === -1) {
-                    $(target).css({ "left": `${30}px`, "top": `${480}px`, "z-index": 100 });
-                    $(target).next().css({ "left": `${-30}px`, "top": `${23}px`, "z-index": 200 });
-                    $(nextTarget).next().css({ "left": `${-30}px`, "top": `${-479}px`, "z-index": 300 });
+          // if (released === true && targetPositionX > 90 && targetPositionX < 299){
+          //      // cardCounter = 0;
+          //      console.log(cardCounter);
+          //      $(target).css("left", targetLeft);
 
-               } else if (cardCounter === -2) {
-                    $(target).css({ "left": `${30}px`, "top": `${-23}px`, "z-index": 100 });
-                    $(prevTarget).css({ "left": `${0}px`, "top": `${500}px`, "z-index": 200 });
-                    $(target).next().css({ "left": `${-30}px`, "top": `${-479}px`, "z-index": 300 });
-               } else if (cardCounter === -3) {
-                    $(target).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
-                    $(target).prev().css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
-                    $(prevTarget).prev().css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
-                    cardCounter = 0;
-                    return;
-               }
-          }
+          // }
      }
 
      function isSelected() {
-          console.log(selected);
+          // console.log($(selected).css("left"));
+          // console.log(selected);
 
           if (selected === "card card-1") {
                $(`.fact-one`).empty().append(carProfiles[0].factOne);
@@ -131,11 +118,20 @@ $(() => {
      }
 
      $(`.card`).on("touchstart", function (e) {
-          targetPosition = e.targetTouches[0].pageX;
+          targetPositionX = e.targetTouches[0].pageX;
+          targetLeft = $(e.target).css("left");
+          // console.log(e.target);
+          // console.log($(e.target).css("left"));
+
+
+          // targetLeft = e.target.css("left");
+          // console.log(targetLeft);
+
+          console.log(e);
 
      }).on("touchmove", function (e) {
           target = e.currentTarget;
-          targetPosition = e.targetTouches[0].pageX;
+          targetPositionX = e.targetTouches[0].pageX;
           nextTarget = $(target).next();
           prevTarget = $(target).prev();
           isMoving();

@@ -71,10 +71,6 @@ body {
     align-self: center;
 }
 
-.details-button:hover {
-    background-color: white;
-    opacity: .5;
-}
 
 .mod-parts-container {
     display: flex;
