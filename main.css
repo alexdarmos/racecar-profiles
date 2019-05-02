@@ -114,7 +114,7 @@ body {
 
 .card-1 {
     position: relative;
-    background-image: url('assets/Wing-small.jpg');
+    /* background-image: url('assets/Wing-small.jpg'); */
     z-index: 300;
     top: 525px;
     left: -30px;
@@ -124,7 +124,7 @@ body {
 .card-2 {
     position: relative;
     /* background-color: lightcoral; */
-    background-image: url('assets/CamaroGrandville-small.jpg');
+    /* background-image: url('assets/CamaroGrandville-small.jpg'); */
     background-size: cover;
     z-index: 200;
     top: 0px;
@@ -134,7 +134,7 @@ body {
 
 .card-3 {
     position: relative;
-    background-image: url('assets/ats-small.jpg');
+    /* background-image: url('assets/ats-small.jpg'); */
     background-size: cover;
     z-index: 100;
     top: -525px;
