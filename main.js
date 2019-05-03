@@ -1,6 +1,10 @@
 $(() => {
 
      let cardCounter = 0;
+     let factList = [];
+     let iconList = [];
+     let galleryList = [];
+     let modList = [];
      let indexCounter = 0;
      let released = false;
      let targetPositionX = null;
@@ -9,102 +13,188 @@ $(() => {
      let prevTarget = null;
      let selected = null;
      let newPosition = 0;
-     let targetLeft = null; 
+     let targetLeft = null;
      let carProfiles = [
           {
-               title: "1",
+               title: "Snowbalt",
                poster: "assets/Wing-small.jpg",
-               factOne: "snowbalt fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "snowbalt fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "snowbalt fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "snowbalt fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "snowbalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/turbo.png"
+               facts: [
+                    "snowbalt fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "snowbalt fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "snowbalt fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "snowbalt fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "snowbalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+               ],
+               gallery:  [                
+                    "assets/snowbalt/photo-gallery/BigPimpin.jpg",
+                    "assets/snowbalt/photo-gallery/Foreground.jpg",
+                    "assets/snowbalt/photo-gallery/PowerStation2.jpg",
+                    "assets/snowbalt/photo-gallery/RyanandTyler.jpg",
+                    "assets/snowbalt/photo-gallery/SnobaltAlone.jpg",
+                    "assets/snowbalt/photo-gallery/ZZSide.jpg"
+               ],
+               mods: [
+                    "assets/snowbalt/mod-gallery/aem-gauge.jpg",
+                    "assets/snowbalt/mod-gallery/o2-harness.jpg",
+                    "assets/snowbalt/mod-gallery/pulley-system.jpg",
+                    "assets/snowbalt/mod-gallery/stage-3-kit.jpg",
+                    "assets/snowbalt/mod-gallery/stainless-downpipe.jpg",
+                    "assets/snowbalt/mod-gallery/z54-turbo.jpg"
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
+
           },
           {
-               title: "2",
+               title: "Camaro",
                poster: "assets/CamaroGrandville-small.jpg",
-               factOne: "camaro fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "camaro fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "camaro fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "camaro fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "camaro fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/turbo.png"
+               facts: [
+                    "camaro fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "camaro fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "camaro fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "camaro fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "camaro fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ],
           },
           {
-               title: "3",
+               title: "WallPaper",
                poster: "assets/ats-small.jpg",
-               factOne: "ATS Wallpaper fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "ATS Wallpaper fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "ATS Wallpaper fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "ATS Wallpaper fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "ATS Wallpaper fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/turbo.png"
+               facts: [
+                    "ATS Wallpaper fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS Wallpaper fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS Wallpaper fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS Wallpaper fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS Wallpaper fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ],
           },
           {
-               title: "4",
+               title: "ATS-V",
                poster: "assets/car-4.jpg",
-               factOne: "Demo-1 fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "Demo-1 fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "Demo-1 fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "Demo-1 fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "Demo-1 fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/turbo.png"
+               facts: [
+                    "ATS-V fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS-V fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS-V fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS-V fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "ATS-V fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
           },
           {
-               title: "5",
+               title: "Matt's Grand Prix",
                poster: "assets/car-5.jpg",
-               factOne: "Demo-2 fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "Demo-2 fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "Demo-2 fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "Demo-2 fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "Demo-2 fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/blower.png"
+               facts: [
+                    "Matt's Grand Prix fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Matt's Grand Prix fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Matt's Grand Prix fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Matt's Grand Prix fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Matt's Grand Prix fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
           },
           {
-               title: "6",
+               title: "Zoom's Grand Prix",
                poster: "assets/car-6.jpg",
-               factOne: "Demo-3 fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "Demo-3 fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "Demo-3 fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "Demo-3 fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "Demo-3 fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/turbo.png"
+               facts: [
+                    "Zoom's Grand Prix fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Zoom's Grand Prix fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Zoom's Grand Prix fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Zoom's Grand Prix fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Zoom's Grand Prix fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
           },
           {
-               title: "7",
+               title: "Sonic",
                poster: "assets/car-7.jpg",
-               factOne: "Demo-4 fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "Demo-4 fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "Demo-4 fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "Demo-4 fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "Demo-4 fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/blower.png"
+               facts: [
+                    "Sonic fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Sonic fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Sonic fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Sonic fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Sonic fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
           },
           {
-               title: "8",
+               title: "Slingshot",
                poster: "assets/car-8.jpg",
-               factOne: "Demo-5 fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "Demo-5 fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "Demo-5 fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "Demo-5 fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "Demo-5 fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/turbo.png"
+               facts: [
+                    "Slingshot fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Slingshot fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Slingshot fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Slingshot fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Slingshot fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
           },
           {
-               title: "9",
+               title: "2-Tone Cobalt",
                poster: "assets/car-9.jpg",
-               factOne: "Demo-6 fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factTwo: "Demo-6 fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factThree: "Demo-6 fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFour: "Demo-6 fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-               factFive: "Demo-6 fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.", 
-               boost: "assets/icons/blower.png"
+               facts: [
+                    "2-Tone Cobalt fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "2-Tone Cobalt fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "2-Tone Cobalt fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "2-Tone Cobalt fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "2-Tone Cobalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+               ],
+               icons:[
+                    "assets/icons/wheel.png",
+                    "assets/icons/piston.png",
+                    "assets/icons/turbo.png",
+                    "assets/icons/coilover.png",
+                    "assets/icons/gauge.png"
+               ]
           },
      ]
-
-
-
 
      //array of visible cars on slider
      let visibleCarProfiles = [carProfiles[0], carProfiles[1], carProfiles[2]];
@@ -112,7 +202,7 @@ $(() => {
      let hiddenCarProfiles = [carProfiles[3], carProfiles[4], carProfiles[5], carProfiles[6], carProfiles[7], carProfiles[8]];
 
      function updateCards() {
-          console.log(visibleCarProfiles);
+          // console.log(visibleCarProfiles);
           $(`.card-1`).css("background-image", `url("${visibleCarProfiles[0].poster}")`);
           $(`.card-2`).css("background-image", `url("${visibleCarProfiles[1].poster}")`);
           $(`.card-3`).css("background-image", `url("${visibleCarProfiles[2].poster}")`);
@@ -134,65 +224,84 @@ $(() => {
           released = true;
           // console.log(cardCounter);
 
-          if (released === true && targetPositionX <= 90 || targetPositionX >= 300 ) {
+          if (released === true && targetPositionX <= 90 || targetPositionX >= 300) {
                cardCounter++;
-
 
                hiddenCarProfiles.push(visibleCarProfiles[0])
                visibleCarProfiles.push(hiddenCarProfiles[0]);
 
                visibleCarProfiles.shift();
                hiddenCarProfiles.shift();
+
                updateCards();
 
-               $(`.card-1`).css({ "left": `${30}px`, "top": `${480}px`, "z-index": 100 });
-               $(`.card-2`).css({ "left": `${-30}px`, "top": `${23}px`, "z-index": 300 });
-               $(`.card-3`).css({ "left": `${0}px`, "top": `${-500}px`, "z-index": 200 });
-
-
+               $(`.card-1`).css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
+               $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
+               $(`.card-3`).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
           }
 
+          if (released === true && targetPositionX > 90 || targetPositionX < 300) {
+               // $(target).css("left", targetLeft);
+          }
      }
 
      function isSelected() {
-          // console.log($(selected).css("left"));
-          // console.log(selected);
+
+          $(`.car-stats`).empty();
 
           if (selected === "card card-1") {
-               $(`.fact-one`).empty().append(visibleCarProfiles[0].factOne);
-               $(`.fact-two`).empty().append(visibleCarProfiles[0].factTwo);
-               $(`.fact-three`).empty().append(visibleCarProfiles[0].factThree);
-               $(`.fact-four`).empty().append(visibleCarProfiles[0].factFour);
-               $(`.fact-five`).empty().append(visibleCarProfiles[0].factFive);
-               $(`.boost-icon`).empty().attr('src', visibleCarProfiles[0].boost);
-
-               // console.log(carProfiles[0].boost)
-          }  
-          
-          if (selected === "card card-2") {
-               $(`.fact-one`).empty().append(visibleCarProfiles[1].factOne);
-               $(`.fact-two`).empty().append(visibleCarProfiles[1].factTwo);
-               $(`.fact-three`).empty().append(visibleCarProfiles[1].factThree);
-               $(`.fact-four`).empty().append(visibleCarProfiles[1].factFour);
-               $(`.fact-five`).empty().append(visibleCarProfiles[1].factFive);
-               $(`.boost-icon`).empty().attr('src', visibleCarProfiles[1].boost);
+               factList = visibleCarProfiles[0].facts;
+               iconList= visibleCarProfiles[0].icons;
+               galleryList = visibleCarProfiles[0].gallery;
+               modList = visibleCarProfiles[0].mods;
+               
+          } else if (selected === "card card-2") {
+               factList = visibleCarProfiles[1].facts;
+               iconList=visibleCarProfiles[1].icons;
+               galleryList = visibleCarProfiles[1].gallery;
+          } else {
+               factList = visibleCarProfiles[2].facts;
+               iconList=visibleCarProfiles[2].icons;
+               galleryList = visibleCarProfiles[2].gallery;
 
           }
+               factList.forEach(function(item, key, arr) {
+                    let result = key % 2;
+                    console.log(result);
+                    console.log(item);
+                    console.log(arr);
 
-          if (selected === "card card-3") {
-               $(`.fact-one`).empty().append(visibleCarProfiles[2].factOne);
-               $(`.fact-two`).empty().append(visibleCarProfiles[2].factTwo);
-               $(`.fact-three`).empty().append(visibleCarProfiles[2].factThree);
-               $(`.fact-four`).empty().append(visibleCarProfiles[2].factFour);
-               $(`.fact-five`).empty().append(visibleCarProfiles[2].factFive);
-               $(`.boost-icon`).empty().attr('src', visibleCarProfiles[2].boost);
+                    if (result === 0) {
+                         $(`.car-stats`).append(`      
+                         <div class="mod-part-sub-container">
+                              <div class="icon"><img src="${iconList[key]}"/></div>
+                              <div class="car-fact">${arr[key]}</div>
+                         </div>`);
+                    } else {
+                         $(`.car-stats`).append(`      
+                         <div class="mod-part-sub-container reverse-row">
+                              <div class="icon"><img src="${iconList[key]}"/></div>
+                              <div class="car-fact">${arr[key]}</div>
+                         </div>`);
+                    }
+               });
 
-          }
+               galleryList.forEach(function(item, key, arr) {
+                    $(`.photo-gallery`).append(`
+                    <img class="photo-gallery-item" src="${item}"/>
+                    `)
+               });
 
+               modList.forEach(function(item, key, arr) {
+                    $(`.mod-gallery`).append(`
+                    <img class="mod-gallery-item" src="${item}"/>
+                    `)
+               });
      }
 
      $(`.card`).on("touchstart", function (e) {
           targetPositionX = e.targetTouches[0].pageX;
+          target = e.target;
           targetLeft = $(e.target).css("left");
 
      }).on("touchmove", function (e) {

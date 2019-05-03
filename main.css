@@ -24,6 +24,13 @@ body {
     width: auto;
 } */
 
+.popup-section-title {
+    align-self: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+
+}
+
 .card {
     display: flex;
     justify-content: center;
@@ -31,6 +38,8 @@ body {
     width:280px;
     height: 500px;
     /* border: solid 1px black; */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .invisible-wall {
@@ -109,6 +118,8 @@ body {
     font-size: 53px;
     align-self: center;
     opacity: .8;
+    text-align: left;
+    width: 270px;
 
 }
 
@@ -139,6 +150,32 @@ body {
     z-index: 100;
     top: -525px;
     left: 30px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.photo-gallery-item {    
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.mod-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.mod-gallery-item {    
+    width: 100px;
+    height: 100px;
+    padding: 5px;
 }
 
 

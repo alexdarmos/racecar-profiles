@@ -1,89 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css"/>
-    <title>Racecar Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css" />
+  <title>Racecar Profile</title>
 </head>
+
 <body>
 
-
   <div id="racecar-flex-card-container">
-      <div class="card card-1">
-        <div class="car-title car-title-1"></div>
-        <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg"/></div>
+    <div class="card card-1">
+      <div class="car-title car-title-1"></div>
+      <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg" /></div>
+    </div>
+    <div class="card card-2">
+      <div class="car-title car-title-2">
       </div>
-      <div class="card card-2">
-          <div class="car-title car-title-2">
-          </div>
-          <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg"/></div>
+      <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg" /></div>
 
-        </div>
-      <div class="card card-3">
-        <div class="car-title car-title-3">
-        </div>
-        <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg"/></div>
-
+    </div>
+    <div class="card card-3">
+      <div class="car-title car-title-3">
       </div>
-      <div class="invisible-wall"></div>
+      <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg" /></div>
+
+    </div>
+    <div class="invisible-wall"></div>
   </div>
 
   <div id="popup-container">
     <div id="exit-button">
-      <img src="assets/icons/baseline-close-24px.svg"/>
-    </div>
-    <div class="mod-parts-container">
-
-      <div class="mod-part-sub-container">
-        <div class="icon"><img src="assets/icons/coilover.png"/></div>
-        <div class="description fact-one">
-        </div>
-      </div>
-
-      <div class="mod-part-sub-container reverse-row">
-          <div class="icon"><img class="boost-icon" src="assets/icons/blower.png"/></div>
-          <div class="description fact-two">
-          </div>
-      </div>
-
-      <div class="mod-part-sub-container">
-          <div class="icon"><img src="assets/icons/guage.png"/></div>
-          <div class="description fact-three">
-          </div>
-      </div>
-
-      <div class="mod-part-sub-container reverse-row">
-          <div class="icon"><img src="assets/icons/piston.png"/></div>
-          <div class="description fact-four">
-          </div>
-      </div>
-
-      <div class="mod-part-sub-container">
-          <div class="icon"><img src="assets/icons/wheel.png"/></div>
-          <div class="description fact-five">
-          </div>
-      </div>
-
-
-
-
-
-
-
-
-      </div>
-
+      <img src="assets/icons/baseline-close-24px.svg" />
     </div>
 
+    <div class="popup-section-title">Stats</div>
+    <div class="car-stats"></div>
+
+    <div class="popup-section-title">Gallery</div>
+    <div class="photo-gallery"></div>
+
+    <div class="popup-section-title">Mod List</div>
+    <div class="mod-gallery"></div>
+
+  </div>
 
 
 
-    <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
