@@ -52,6 +52,10 @@ body {
     top: 0px;
 }
 
+.slider-buttons {
+    display: none;
+}
+
 #popup-container {
     display: none;
     margin-top: 5%;
@@ -62,7 +66,7 @@ body {
     z-index: 1000;
     opacity: 0.98;
     overflow-x: scroll;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     padding: 5px;
 }
 
@@ -179,6 +183,199 @@ body {
 }
 
 
+@media only screen and (min-width: 600px) and (max-width: 830px) {
+    #racecar-flex-card-container {
+        display: flex;
+        margin-top: 33%;
+        position: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+        width: 98%;
+        justify-content: unset;
+        flex-direction: unset;
+        flex-wrap: wrap;
+        align-content: unset;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 600px;
+        height: 500px;
+        /* border: solid 1px black; */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .card-1 {
+        position: relative;
+        /* background-image: url(assets/Wing-small.jpg); */
+        z-index: 300;
+        top: 0px;
+        left: 55px;
+    }
+
+    .card-2 {
+        position: relative;
+        /* background-color: lightcoral; */
+        /* background-image: url(assets/CamaroGrandville-small.jpg); */
+        background-size: cover;
+        z-index: 200;
+        top: -525px;
+        left: 90px;
+    }
+
+    .card-3 {
+        position: relative;
+        /* background-image: url(assets/ats-small.jpg); */
+        background-size: cover;
+        z-index: 100;
+        top: -1050px;
+        left: 130px;
+    }
+
+    .invisible-wall {
+        width: 650px;
+        height: 530px;
+        z-index: 250;
+        background-color: white;
+        opacity: .6;
+        position: absolute;
+        top: 203px;
+        left: 88px;
+    }
+
+    #popup-container {
+        display: none;
+        margin-top: 5%;
+        flex-direction: column;
+        width: 700px;
+        height: 75vh;
+        background-color: #F8F8F8;
+        z-index: 1000;
+        opacity: 0.98;
+        overflow-x: scroll;
+        /* border: solid 1px black; */
+        padding: 5px;
+        /* margin: 0 auto; */
+        /* left: 25px; */
+        padding: 25px;
+        top: 0px;
+        position: absolute;
+    }
+
+    .car-title {
+        text-align: center;
+    }
+
+    
+}
+
+@media only screen and (min-width: 831px) {
+    body {
+        display: flex;
+        justify-content: center;
+        /* flex-direction: column; */
+        width: 100%;
+        align-content: center;
+        align-self: center;
+        height: 100vh;
+    }
+
+    #racecar-flex-card-container {
+        display: flex;
+        margin-top: 80px;
+        justify-content: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+        width: unset;
+        justify-content: unset;
+        flex-direction: unset;
+        flex-wrap: unset;
+        align-self: center;
+    }
+
+    .card-1 {
+        position: relative;
+        z-index: 100;
+        width: auto;
+        height: 525px;
+        top: 25px;
+        left: 125px;
+        opacity: .5;
+    }
+
+    .card-2 {
+        z-index: 200;
+        top: unset;
+        width: 550px;
+        height: 550px;
+        left: unset;
+    }
+
+    .card-3 {
+        position: relative;
+        z-index: 100;
+        top: 25px;
+        left: -125px;
+        width: auto;
+        height: 525px;
+        opacity: .5;
+
+    }
+
+    .invisible-wall {
+        display: none;
+    }
+
+    .slider-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slider-buttons > button {
+        margin: 5px;
+        height: 30px;
+        width: 100px;
+    }
+
+
+    .transition {
+        animation: slide-in 0.5s forwards;
+        -webkit-animation: slide-in 0.5s forwards;
+    }
+
+    /* .transition-center-card {
+        transition-duration: 0.7s;
+        transform: skewY(0deg);
+        top: 0px;
+        width: 500px;
+        left: 500px;
+    } */
+
+
+
+    #popup-container {
+        display: none;
+        margin-top: 1%;
+        flex-direction: column;
+        width: 889px;
+        height: 100vh;
+        background-color: #F8F8F8;
+        z-index: 1000;
+        opacity: 0.98;
+        overflow-x: scroll;
+        /* border: solid 1px black; */
+        /* padding: 5px; */
+        /* align-self: center; */
+        /* margin: 0 auto; */
+        /* justify-self: center; */
+        left: -6%;
+        position: relative;
+    }
 
 
 
@@ -187,11 +384,5 @@ body {
 
 
 
-
-
-
-
-
-@media only screen and (min-width: 600px) {
 
 }

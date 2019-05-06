@@ -14,34 +14,37 @@ $(() => {
      let selected = null;
      let newPosition = 0;
      let targetLeft = null;
+     let screenWidth = $(window).width();
+     console.log(`screen width: ${screenWidth}`);
+
      let carProfiles = [
           {
-               title: "Snowbalt",
+               title: "Snobalt",
                poster: "assets/Wing-small.jpg",
                facts: [
-                    "snowbalt fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "snowbalt fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "snowbalt fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "snowbalt fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "snowbalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+                    "Snobalt fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Snobalt fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Snobalt fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Snobalt fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Snobalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit."
                ],
-               gallery:  [                
-                    "assets/snowbalt/photo-gallery/BigPimpin.jpg",
-                    "assets/snowbalt/photo-gallery/Foreground.jpg",
-                    "assets/snowbalt/photo-gallery/PowerStation2.jpg",
-                    "assets/snowbalt/photo-gallery/RyanandTyler.jpg",
-                    "assets/snowbalt/photo-gallery/SnobaltAlone.jpg",
-                    "assets/snowbalt/photo-gallery/ZZSide.jpg"
+               gallery: [
+                    "assets/snobalt/photo-gallery/snobalt-1.jpg",
+                    "assets/snobalt/photo-gallery/snobalt-2.jpg",
+                    "assets/snobalt/photo-gallery/snobalt-3.jpg",
+                    "assets/snobalt/photo-gallery/snobalt-4.jpg",
+                    "assets/snobalt/photo-gallery/snobalt-5.jpg",
+                    "assets/snobalt/photo-gallery/snobalt-6.jpg"
                ],
                mods: [
-                    "assets/snowbalt/mod-gallery/aem-gauge.jpg",
-                    "assets/snowbalt/mod-gallery/o2-harness.jpg",
-                    "assets/snowbalt/mod-gallery/pulley-system.jpg",
-                    "assets/snowbalt/mod-gallery/stage-3-kit.jpg",
-                    "assets/snowbalt/mod-gallery/stainless-downpipe.jpg",
-                    "assets/snowbalt/mod-gallery/z54-turbo.jpg"
+                    "assets/snobalt/mod-gallery/aem-gauge.jpg",
+                    "assets/snobalt/mod-gallery/o2-harness.jpg",
+                    "assets/snobalt/mod-gallery/pulley-system.jpg",
+                    "assets/snobalt/mod-gallery/stage-3-kit.jpg",
+                    "assets/snobalt/mod-gallery/stainless-downpipe.jpg",
+                    "assets/snobalt/mod-gallery/z54-turbo.jpg"
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -60,7 +63,7 @@ $(() => {
                     "camaro fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "camaro fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -78,7 +81,7 @@ $(() => {
                     "ATS Wallpaper fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "ATS Wallpaper fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -96,7 +99,7 @@ $(() => {
                     "ATS-V fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "ATS-V fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -114,7 +117,7 @@ $(() => {
                     "Matt's Grand Prix fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "Matt's Grand Prix fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -132,7 +135,7 @@ $(() => {
                     "Zoom's Grand Prix fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "Zoom's Grand Prix fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -150,7 +153,7 @@ $(() => {
                     "Sonic fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "Sonic fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -168,7 +171,7 @@ $(() => {
                     "Slingshot fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "Slingshot fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -186,7 +189,7 @@ $(() => {
                     "2-Tone Cobalt fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "2-Tone Cobalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               icons:[
+               icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
                     "assets/icons/turbo.png",
@@ -195,6 +198,8 @@ $(() => {
                ]
           },
      ]
+
+
 
      //array of visible cars on slider
      let visibleCarProfiles = [carProfiles[0], carProfiles[1], carProfiles[2]];
@@ -215,88 +220,145 @@ $(() => {
      updateCards();
 
      function isMoving() {
-          newPosition = targetPositionX - 280;
+          if (screenWidth < 600) {
+               newPosition = targetPositionX - 280;
+               // console.log(targetPosition);
+          } else if (screenWidth >= 600 && screenWidth <= 768) {
+               newPosition = targetPositionX - 480;
+          }
           $(target).css("left", newPosition);
-          // console.log(targetPosition);
+
      }
 
      function isReleased() {
           released = true;
-          // console.log(cardCounter);
 
-          if (released === true && targetPositionX <= 90 || targetPositionX >= 300) {
-               cardCounter++;
+          if (released === true) {
 
-               hiddenCarProfiles.push(visibleCarProfiles[0])
-               visibleCarProfiles.push(hiddenCarProfiles[0]);
+               if (screenWidth < 600) {
+                    if (targetPositionX <= 90 || targetPositionX >= 300) {
+                         hiddenCarProfiles.push(visibleCarProfiles[0]);
+                         visibleCarProfiles.push(hiddenCarProfiles[0]);
 
-               visibleCarProfiles.shift();
-               hiddenCarProfiles.shift();
+                         visibleCarProfiles.shift();
+                         hiddenCarProfiles.shift();
 
-               updateCards();
+                         updateCards();
 
-               $(`.card-1`).css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
-               $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
-               $(`.card-3`).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
+
+                         $(`.card-1`).css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
+                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
+                         $(`.card-3`).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
+
+                    }
+               }
+               if (screenWidth >= 600 && screenWidth <= 768) {
+                    if (targetPositionX < 300 || targetPositionX >= 800) {
+                         console.log(`position X: ${targetPositionX}`);
+
+                         hiddenCarProfiles.push(visibleCarProfiles[0]);
+                         visibleCarProfiles.push(hiddenCarProfiles[0]);
+
+                         visibleCarProfiles.shift();
+                         hiddenCarProfiles.shift();
+
+                         updateCards();
+
+                         $(`.card-1`).css({ "left": `${55}px`, "top": `${0}px`, "z-index": 300 });
+                         $(`.card-2`).css({ "left": `${90}px`, "top": `${-525}px`, "z-index": 200 });
+                         $(`.card-3`).css({ "left": `${130}px`, "top": `${-1050}px`, "z-index": 100 });
+                    }
+               }
+
+
+
+
           }
 
-          if (released === true && targetPositionX > 90 || targetPositionX < 300) {
-               // $(target).css("left", targetLeft);
-          }
      }
+
+     function isSelectedPrevious() {
+          hiddenCarProfiles.push(visibleCarProfiles[0]);
+          visibleCarProfiles.push(hiddenCarProfiles[0]);
+          visibleCarProfiles.shift();
+          hiddenCarProfiles.shift();
+          updateCards();
+     }
+
+     function isSelectedNext() {
+          hiddenCarProfiles.unshift(visibleCarProfiles[2]);
+          visibleCarProfiles.unshift(hiddenCarProfiles[5]);
+          visibleCarProfiles.pop();
+          hiddenCarProfiles.pop();
+          updateCards();
+
+
+
+
+
+
+
+     }
+
+
+
+
 
      function isSelected() {
 
           $(`.car-stats`).empty();
+          $(`.photo-gallery`).empty();
+          $(`.mod-gallery`).empty();
+
 
           if (selected === "card card-1") {
                factList = visibleCarProfiles[0].facts;
-               iconList= visibleCarProfiles[0].icons;
+               iconList = visibleCarProfiles[0].icons;
                galleryList = visibleCarProfiles[0].gallery;
                modList = visibleCarProfiles[0].mods;
-               
+
           } else if (selected === "card card-2") {
                factList = visibleCarProfiles[1].facts;
-               iconList=visibleCarProfiles[1].icons;
+               iconList = visibleCarProfiles[1].icons;
                galleryList = visibleCarProfiles[1].gallery;
           } else {
                factList = visibleCarProfiles[2].facts;
-               iconList=visibleCarProfiles[2].icons;
+               iconList = visibleCarProfiles[2].icons;
                galleryList = visibleCarProfiles[2].gallery;
 
           }
-               factList.forEach(function(item, key, arr) {
-                    let result = key % 2;
-                    console.log(result);
-                    console.log(item);
-                    console.log(arr);
+          factList.forEach(function (item, key, arr) {
+               let result = key % 2;
+               console.log(result);
+               console.log(item);
+               console.log(arr);
 
-                    if (result === 0) {
-                         $(`.car-stats`).append(`      
-                         <div class="mod-part-sub-container">
-                              <div class="icon"><img src="${iconList[key]}"/></div>
-                              <div class="car-fact">${arr[key]}</div>
-                         </div>`);
-                    } else {
-                         $(`.car-stats`).append(`      
-                         <div class="mod-part-sub-container reverse-row">
-                              <div class="icon"><img src="${iconList[key]}"/></div>
-                              <div class="car-fact">${arr[key]}</div>
-                         </div>`);
-                    }
-               });
+               if (result === 0) {
+                    $(`.car-stats`).append(`      
+                    <div class="mod-part-sub-container">
+                    <div class="icon"><img src="${iconList[key]}"/></div>
+                    <div class="car-fact">${arr[key]}</div>
+                    </div>`);
+               } else {
+                    $(`.car-stats`).append(`      
+                    <div class="mod-part-sub-container reverse-row">
+                    <div class="icon"><img src="${iconList[key]}"/></div>
+                    <div class="car-fact">${arr[key]}</div>
+                    </div>`);
+               }
+          });
 
-               galleryList.forEach(function(item, key, arr) {
-                    $(`.photo-gallery`).append(`
-                    <img class="photo-gallery-item" src="${item}"/>
-                    `)
-               });
+          galleryList.forEach(function (item, key, arr) {
+               $(`.photo-gallery`).append(`
+               <img class="photo-gallery-item" src="${item}"/>
+               `)
+          });
 
-               modList.forEach(function(item, key, arr) {
-                    $(`.mod-gallery`).append(`
-                    <img class="mod-gallery-item" src="${item}"/>
-                    `)
-               });
+          modList.forEach(function (item, key, arr) {
+               $(`.mod-gallery`).append(`
+               <img class="mod-gallery-item" src="${item}"/>
+               `)
+          });
      }
 
      $(`.card`).on("touchstart", function (e) {
@@ -324,6 +386,15 @@ $(() => {
      $(`#exit-button`).on("click", function (e) {
           $(`#popup-container`).fadeOut("slow");
      })
+
+     $(`#previous-button`).on("click", function (e) {
+          isSelectedPrevious();
+     })
+
+     $(`#next-button`).on("click", function (e) {
+          isSelectedNext()
+     })
+
 
 })
 
