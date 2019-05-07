@@ -12,6 +12,8 @@
 <body>
 
   <div id="racecar-flex-card-container">
+      <div class="invisible-wall"></div>
+
     <div class="card card-1">
       <div class="car-title car-title-1"></div>
       <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg" /></div>
@@ -28,13 +30,17 @@
       <div class="details-button"><img src="assets/icons/sharp-details-grey-24px.svg" /></div>
 
     </div>
-    <div class="invisible-wall"></div>
+
+
+    <div class="slider-buttons">
+      <button class="button" id="previous-button"><img src="assets/icons/arrow-left.svg"/></button>
+      <button class="button" id="next-button"><img src="assets/icons/arrow-right.svg"/></button>
   </div>
 
-  <div class="slider-buttons">
-      <button id="previous-button">Previous</button>
-      <button id="next-button">Next</button>
   </div>
+
+
+  
 
   <div id="popup-container">
     <div id="exit-button">
@@ -50,6 +56,10 @@
     <div class="popup-section-title">Mod List</div>
     <div class="mod-gallery"></div>
 
+    <div class="scrollbar" id="style-1">
+      <div class="force-overflow"></div>
+  </div> 
+
   </div>
 
 
@@ -57,6 +67,8 @@
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <script src="main.js"></script>
 </body>
 

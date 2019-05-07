@@ -6,6 +6,26 @@ body {
     margin: 0px;
 }
 
+.scrollbar {
+    background-color: #F5F5F5;
+    float: left;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-left: 22px;
+    margin-top: 40px;
+    width: 65px;
+    overflow-y: scroll;
+}
+
+.force-overflow {
+    min-height: 450px;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+
 #racecar-flex-card-container {
     display: flex;
     position: absolute;
@@ -43,11 +63,11 @@ body {
 }
 
 .invisible-wall {
-    width: 400px;
-    height: 660px;
+    width: 100vw;
+    height: 100vw;
     z-index: 250;
     background-color: white;
-    opacity: .6;
+    opacity: 0;
     position: absolute;
     top: 0px;
 }
@@ -60,20 +80,20 @@ body {
     display: none;
     margin-top: 5%;
     flex-direction: column;
-    width: 350px;
-    height: 80%;
+    width: 88vw;
+    height: 88vh;
     background-color: #F8F8F8;
     z-index: 1000;
     opacity: 0.98;
-    overflow-x: scroll;
-    /* border: solid 1px black; */
+    overflow-y: scroll;
     padding: 5px;
+    position: absolute;
 }
 
 #exit-button {
     height: 25px;
     width: 25px;
-    /* align-self: flex-end; */
+    align-self: flex-end;
     padding: 20px;
 }
 
@@ -144,6 +164,8 @@ body {
     z-index: 200;
     top: 0px;
     left: 0px;
+    opacity: .6;
+
 }
 
 
@@ -154,6 +176,8 @@ body {
     z-index: 100;
     top: -525px;
     left: 30px;
+    opacity: .4;
+
 }
 
 .photo-gallery {
@@ -236,7 +260,7 @@ body {
         left: 130px;
     }
 
-    .invisible-wall {
+    /* .invisible-wall {
         width: 650px;
         height: 530px;
         z-index: 250;
@@ -245,9 +269,9 @@ body {
         position: absolute;
         top: 203px;
         left: 88px;
-    }
+    } */
 
-    #popup-container {
+    /* #popup-container {
         display: none;
         margin-top: 5%;
         flex-direction: column;
@@ -256,15 +280,12 @@ body {
         background-color: #F8F8F8;
         z-index: 1000;
         opacity: 0.98;
-        overflow-x: scroll;
-        /* border: solid 1px black; */
+        overflow-y: scroll;
         padding: 5px;
-        /* margin: 0 auto; */
-        /* left: 25px; */
         padding: 25px;
         top: 0px;
         position: absolute;
-    }
+    } */
 
     .car-title {
         text-align: center;
@@ -287,18 +308,17 @@ body {
     #racecar-flex-card-container {
         display: flex;
         margin-top: 80px;
-        justify-content: unset;
+        justify-content: center;
         top: unset;
         left: unset;
         height: unset;
-        width: unset;
-        justify-content: unset;
+        width: 80vw;
         flex-direction: unset;
         flex-wrap: unset;
         align-self: center;
     }
 
-    .card-1 {
+    /* .card-1 {
         position: relative;
         z-index: 100;
         width: auto;
@@ -306,6 +326,17 @@ body {
         top: 25px;
         left: 125px;
         opacity: .5;
+    } */
+
+    .card-1 {
+        position: relative;
+        z-index: 100;
+        width: auto;
+        height: 550px;
+        top: -31px;
+        left: -7px;
+        opacity: .09;
+        transform: skewY(13deg);
     }
 
     .card-2 {
@@ -314,9 +345,10 @@ body {
         width: 550px;
         height: 550px;
         left: unset;
+        opacity: 1;
     }
 
-    .card-3 {
+    /* .card-3 {
         position: relative;
         z-index: 100;
         top: 25px;
@@ -324,23 +356,59 @@ body {
         width: auto;
         height: 525px;
         opacity: .5;
+    } */
 
+    .card-3 {
+        position: relative;
+        z-index: 100;
+        top: -31px;
+        left: 7px;
+        width: auto;
+        height: 550px;
+        opacity: .09;
+        transform: skewY(-13deg);
     }
 
     .invisible-wall {
-        display: none;
-    }
+    margin: 0 auto;
+    background-color: white;
+    opacity: 0;
+    z-index: 150;
+    margin-top: -10%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
 
     .slider-buttons {
         display: flex;
+        position: absolute;
         flex-direction: row;
+        height: auto;
+        width: 100%;
+        justify-content: space-between;
+        align-content: center;
+        align-self: center;
     }
 
     .slider-buttons > button {
-        margin: 5px;
-        height: 30px;
-        width: 100px;
+        /* margin: 5px; */
+        /* height: 30px; */
+        /* width: 100px; */
+        border: none;
+        background-color: unset;
+        z-index: 2000;
+        
     }
+
+    .button > img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .button:focus {
+        outline: none;
+      }
 
 
     .transition {
@@ -348,35 +416,52 @@ body {
         -webkit-animation: slide-in 0.5s forwards;
     }
 
-    /* .transition-center-card {
-        transition-duration: 0.7s;
-        transform: skewY(0deg);
-        top: 0px;
-        width: 500px;
-        left: 500px;
-    } */
-
-
-
     #popup-container {
         display: none;
-        margin-top: 1%;
+        /* margin-top: 1%; */
         flex-direction: column;
-        width: 889px;
-        height: 100vh;
+        width: 40%;
+        height: 85vh;
         background-color: #F8F8F8;
         z-index: 1000;
         opacity: 0.98;
-        overflow-x: scroll;
+        overflow-y: scroll;
         /* border: solid 1px black; */
         /* padding: 5px; */
         /* align-self: center; */
         /* margin: 0 auto; */
         /* justify-self: center; */
-        left: -6%;
+        /* left: -6%; */
         position: relative;
     }
 
+    .car-title {
+        text-align: center;
+    }
+
+    .photo-gallery-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .mod-gallery-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .photo-gallery-item:hover {
+        opacity: .5;
+    }
+
+  
+    
+    .mod-gallery-item:hover {
+        opacity: .5;
+    }
+
+    .icon > img {
+        height: 100px;
+    }
 
 
 

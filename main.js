@@ -203,21 +203,47 @@ $(() => {
 
      //array of visible cars on slider
      let visibleCarProfiles = [carProfiles[0], carProfiles[1], carProfiles[2]];
+     let firstVisible = $(visibleCarProfiles).first();
+     let lastVisible = $(visibleCarProfiles).last();
      //array of the rest of the cars
      let hiddenCarProfiles = [carProfiles[3], carProfiles[4], carProfiles[5], carProfiles[6], carProfiles[7], carProfiles[8]];
+     // let firstHidden = $(hiddenCarProfiles).first();
+     // let lastHidden = $(hiddenCarProfiles).last();
 
-     function updateCards() {
-          // console.log(visibleCarProfiles);
-          $(`.card-1`).css("background-image", `url("${visibleCarProfiles[0].poster}")`);
-          $(`.card-2`).css("background-image", `url("${visibleCarProfiles[1].poster}")`);
-          $(`.card-3`).css("background-image", `url("${visibleCarProfiles[2].poster}")`);
 
-          $(`.car-title-1`).text(visibleCarProfiles[0].title);
-          $(`.car-title-2`).text(visibleCarProfiles[1].title);
-          $(`.car-title-3`).text(visibleCarProfiles[2].title);
+     console.log(visibleCarProfiles);
+     console.log(hiddenCarProfiles);
+
+
+
+
+     function updateCards(visible) {
+          $(`.card-1`).css("background-image", `url("${visible[0].poster}")`);
+          $(`.card-2`).css("background-image", `url("${visible[1].poster}")`);
+          $(`.card-3`).css("background-image", `url("${visible[2].poster}")`);
+
+          $(`.car-title-1`).text(visible[0].title);
+          $(`.car-title-2`).text(visible[1].title);
+          $(`.car-title-3`).text(visible[2].title);
      }
 
-     updateCards();
+     updateCards(visibleCarProfiles);
+
+     function isNext() {
+          visibleCarProfiles.unshift(hiddenCarProfiles[5]);
+          hiddenCarProfiles.unshift(visibleCarProfiles[3]);
+          visibleCarProfiles.pop();
+          hiddenCarProfiles.pop();
+          updateCards(visibleCarProfiles);
+     }
+
+     function isPrevious() {
+          visibleCarProfiles.push(hiddenCarProfiles[0]);
+          hiddenCarProfiles.push(visibleCarProfiles[0]);
+          visibleCarProfiles.shift();
+          hiddenCarProfiles.shift();
+          updateCards(visibleCarProfiles);
+     }
 
      function isMoving() {
           if (screenWidth < 600) {
@@ -237,13 +263,14 @@ $(() => {
 
                if (screenWidth < 600) {
                     if (targetPositionX <= 90 || targetPositionX >= 300) {
-                         hiddenCarProfiles.push(visibleCarProfiles[0]);
-                         visibleCarProfiles.push(hiddenCarProfiles[0]);
+                         isPrevious();
+                         // hiddenCarProfiles.push(visibleCarProfiles[0]);
+                         // visibleCarProfiles.push(hiddenCarProfiles[0]);
 
-                         visibleCarProfiles.shift();
-                         hiddenCarProfiles.shift();
+                         // visibleCarProfiles.shift();
+                         // hiddenCarProfiles.shift();
 
-                         updateCards();
+                         // updateCards(visibleCarProfiles);
 
 
                          $(`.card-1`).css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
@@ -255,14 +282,14 @@ $(() => {
                if (screenWidth >= 600 && screenWidth <= 768) {
                     if (targetPositionX < 300 || targetPositionX >= 800) {
                          console.log(`position X: ${targetPositionX}`);
+                         isPrevious();
+                         // hiddenCarProfiles.push(visibleCarProfiles[0]);
+                         // visibleCarProfiles.push(hiddenCarProfiles[0]);
 
-                         hiddenCarProfiles.push(visibleCarProfiles[0]);
-                         visibleCarProfiles.push(hiddenCarProfiles[0]);
+                         // visibleCarProfiles.shift();
+                         // hiddenCarProfiles.shift();
 
-                         visibleCarProfiles.shift();
-                         hiddenCarProfiles.shift();
-
-                         updateCards();
+                         // updateCards(visibleCarProfiles);
 
                          $(`.card-1`).css({ "left": `${55}px`, "top": `${0}px`, "z-index": 300 });
                          $(`.card-2`).css({ "left": `${90}px`, "top": `${-525}px`, "z-index": 200 });
@@ -277,32 +304,23 @@ $(() => {
 
      }
 
-     function isSelectedPrevious() {
-          hiddenCarProfiles.push(visibleCarProfiles[0]);
-          visibleCarProfiles.push(hiddenCarProfiles[0]);
-          visibleCarProfiles.shift();
-          hiddenCarProfiles.shift();
-          updateCards();
-     }
+     // function isSelectedPrevious() {
+     //      isPrevious()
+     //      visibleCarProfiles.push(hiddenCarProfiles[0]);
+     //      hiddenCarProfiles.push(visibleCarProfiles[0]);
+     //      visibleCarProfiles.shift();
+     //      hiddenCarProfiles.shift();
+     //      updateCards(visibleCarProfiles);
+     // }
 
-     function isSelectedNext() {
-          hiddenCarProfiles.unshift(visibleCarProfiles[2]);
-          visibleCarProfiles.unshift(hiddenCarProfiles[5]);
-          visibleCarProfiles.pop();
-          hiddenCarProfiles.pop();
-          updateCards();
-
-
-
-
-
-
-
-     }
-
-
-
-
+     // function isSelectedNext() {
+     //      isNext()
+     //      visibleCarProfiles.unshift(hiddenCarProfiles[5]);
+     //      hiddenCarProfiles.unshift(visibleCarProfiles[3]);
+     //      visibleCarProfiles.pop();
+     //      hiddenCarProfiles.pop();
+     //      updateCards(visibleCarProfiles);
+     // }
 
      function isSelected() {
 
@@ -321,10 +339,14 @@ $(() => {
                factList = visibleCarProfiles[1].facts;
                iconList = visibleCarProfiles[1].icons;
                galleryList = visibleCarProfiles[1].gallery;
+               modList = visibleCarProfiles[1].mods;
+
           } else {
                factList = visibleCarProfiles[2].facts;
                iconList = visibleCarProfiles[2].icons;
                galleryList = visibleCarProfiles[2].gallery;
+               modList = visibleCarProfiles[2].mods;
+
 
           }
           factList.forEach(function (item, key, arr) {
@@ -388,11 +410,11 @@ $(() => {
      })
 
      $(`#previous-button`).on("click", function (e) {
-          isSelectedPrevious();
+          isPrevious();
      })
 
      $(`#next-button`).on("click", function (e) {
-          isSelectedNext()
+          isNext()
      })
 
 
