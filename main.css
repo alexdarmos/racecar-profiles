@@ -46,8 +46,9 @@ body {
 
 .popup-section-title {
     align-self: center;
-    margin-bottom: 25px;
+    margin: 25px 0px 25px 0px;
     font-weight: bold;
+    text-decoration: underline;
 
 }
 
@@ -64,7 +65,7 @@ body {
 
 .invisible-wall {
     width: 100vw;
-    height: 100vw;
+    height: 100%;
     z-index: 250;
     background-color: white;
     opacity: 0;
@@ -188,8 +189,8 @@ body {
 }
 
 .photo-gallery-item {    
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 300px;
     padding: 5px;
 }
 
@@ -201,8 +202,8 @@ body {
 }
 
 .mod-gallery-item {    
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 300px;
     padding: 5px;
 }
 
@@ -375,7 +376,7 @@ body {
     opacity: 0;
     z-index: 150;
     margin-top: -10%;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: absolute;
 }
@@ -440,8 +441,8 @@ body {
     }
 
     .photo-gallery-item {
-        width: 200px;
-        height: 200px;
+        width: 348px;
+        height: 242px;
     }
 
     .mod-gallery-item {
@@ -460,9 +461,14 @@ body {
     }
 
     .icon > img {
-        height: 100px;
+        height: 125px;
     }
 
+    .car-fact {
+        font-size: 22px;
+        padding: 25px;
+        text-align: center;
+    }
 
 
 
