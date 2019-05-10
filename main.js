@@ -16,7 +16,7 @@ $(() => {
      let newPosition = 0;
      let targetLeft = null;
      let screenWidth = $(window).width();
-     // console.log(`screen width: ${screenWidth}`);
+     console.log(`screen width: ${screenWidth}`);
 
      let carProfiles = [
           {
