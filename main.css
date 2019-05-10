@@ -346,6 +346,7 @@ body {
         z-index: 200;
         top: unset;
         width: 550px;
+        min-width: 500px;
         height: 550px;
         left: unset;
         opacity: 1;

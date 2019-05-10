@@ -856,6 +856,7 @@ $(() => {
 
      }).on("click", function (e) {
           $(`#popup-container`).fadeIn("slow").css("display", "flex");
+          $(`.slider-buttons`).toggle();
           selected = e.currentTarget.className;
           isSelected();
 
@@ -863,6 +864,7 @@ $(() => {
 
      $(`#exit-button`).on("click", function (e) {
           $(`#popup-container`).fadeOut("slow");
+          $(`.slider-buttons`).toggle();
      })
 
      $(`#previous-button`).on("click", function (e) {
