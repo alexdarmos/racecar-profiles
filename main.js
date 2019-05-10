@@ -1,6 +1,7 @@
 $(() => {
 
      let cardCounter = 0;
+     let clickCount = 0;
      let factList = [];
      let iconList = [];
      let galleryList = [];
@@ -15,12 +16,13 @@ $(() => {
      let newPosition = 0;
      let targetLeft = null;
      let screenWidth = $(window).width();
-     console.log(`screen width: ${screenWidth}`);
+     // console.log(`screen width: ${screenWidth}`);
 
      let carProfiles = [
           {
                title: "Snobalt",
                poster: "assets/snobalt/photo-gallery/snobalt-01.jpg",
+               posterMobile: "assets/snobalt/photo-gallery/snobalt-mobile-01.jpg",
                facts: [
                     "The Snobalt is the only Cobalt to win a domestic vehicle class at the world touring WekFest Car Show.",
                     "It has the second highest horse power, putting out as much as 612hp at the wheels. ",
@@ -104,12 +106,14 @@ $(() => {
           {
                title: "Camaro",
                poster: "assets/camaro/photo-gallery/camaro-01.jpg",
+               posterMobile: "assets/camaro/photo-gallery/camaro-mobile-01.jpg",
+
                facts: [
-                    "camaro fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "camaro fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "camaro fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "camaro fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "camaro fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "camaro fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "camaro fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "camaro fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "camaro fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "camaro fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
                gallery: [
                     "assets/camaro/photo-gallery/camaro-01.jpg",
@@ -187,17 +191,18 @@ $(() => {
     
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    // "assets/icons/wheel.png",
+                    // "assets/icons/piston.png",
+                    // "assets/icons/turbo.png",
+                    // "assets/icons/coilover.png",
+                    // "assets/icons/gauge.png"
                ]
 
           },
           {
                title: "WallPaper",
                poster: "assets/ats-wallpaper/photo-gallery/wallpaper-03.jpg",
+               posterMobile: "assets/ats-wallpaper/photo-gallery/wallpaper-mobile-01.jpg",
                facts: [
                     "The ZZP Wallpaper ATS is the highest WHP ATS, topping out at 456 WHP.",
                     "It was also chosen to be a display vehicle for SEMA 2014.",
@@ -326,6 +331,8 @@ $(() => {
           {
                title: "ATS-V",
                poster: "assets/ats-v/photo-gallery/atsv-02.jpg",
+               posterMobile: "assets/ats-v/photo-gallery/atsv-mobile-01.jpg",
+
                facts: [
                     "Our ATS-V is the fastest on the planet and can go from 0 to 134mph in 10.34 seconds.",
                     "This is also the highest horsepower ATS-V, putting out 619 WHP.",
@@ -383,6 +390,7 @@ $(() => {
           {
                title: "Matt's Grand Prix",
                poster: "assets/car-5.jpg",
+               posterMobile: "assets/car-5.jpg",
                facts: [
                     "Matt's Grand Prix fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "Matt's Grand Prix fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
@@ -393,11 +401,11 @@ $(() => {
                gallery: [],
                mods: [
                     {
-                         photo: "assets/",
+                         photo: "https:",
                          url: ""
                     },
                     {
-                         photo: "assets/",
+                         photo: "https:",
                          url: ""
                     },
                     {
@@ -420,6 +428,7 @@ $(() => {
           {
                title: "Zoom's Grand Prix",
                poster: "assets/car-6.jpg",
+               posterMobile: "assets/car-6.jpg",
                facts: [
                     "Zoom's Grand Prix fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "Zoom's Grand Prix fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
@@ -430,11 +439,11 @@ $(() => {
                gallery: [],
                mods: [
                     {
-                         photo: "assets/",
+                         photo: "https:",
                          url: ""
                     },
                     {
-                         photo: "assets/",
+                         photo: "https:",
                          url: ""
                     },
                     {
@@ -456,81 +465,142 @@ $(() => {
           },
           {
                title: "Sonic",
-               poster: "assets/car-7.jpg",
+               poster: "assets/sonic-ltz/photo-gallery/sonic-04.jpg",
+               posterMobile: "assets/sonic-ltz/photo-gallery/sonic-mobile-01.jpg",
                facts: [
-                    "Sonic fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Sonic fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Sonic fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Sonic fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Sonic fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Our Sonic LTZ's fastest 1/4 mile time is 13.65 seconds, hitting a top speed of 105 mph.",
+                    // "Sonic fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "Sonic fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "Sonic fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "Sonic fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               gallery: [],
+               gallery: [
+                    "assets/sonic-ltz/photo-gallery/sonic-01.jpg",
+                    "assets/sonic-ltz/photo-gallery/sonic-02.jpg",
+                    "assets/sonic-ltz/photo-gallery/sonic-03.jpg",
+                    "assets/sonic-ltz/photo-gallery/sonic-04.jpg",
+                    "assets/sonic-ltz/photo-gallery/sonic-05.jpg",
+                    "assets/sonic-ltz/photo-gallery/sonic-06.jpg"
+               ],
                mods: [
                     {
-                         photo: "assets/",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/air-intake-ported-intake-manifold-1_300x.jpg?v=1540837267",
+                         url: "https://zzperformance.com/products/ported-intake-manifold"
                     },
                     {
-                         photo: "assets/",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/air-intake-zzp-sonic-cold-air-intake-1_300x300.jpg?v=1540836441",
+                         url: "https://zzperformance.com/products/zzp-sonic-cold-air-intake"
                     },
                     {
-                         photo: "",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/intercooling-sonic-intercooler-package-1_300x300.jpg?v=1540836407",
+                         url: "https://zzperformance.com/products/sonic-intercooler-package"
                     },
                     {
-                         photo: "",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/camshafts-valvetrain-72-valve-springs-1_300x.jpg?v=1540837073",
+                         url: "https://zzperformance.com/collections/sonic-cruze/products/72-valve-springs"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/suspension-brakes-sonic-cruze-12-front-brake-kit-1_300x300.jpg?v=1540834640",
+                         url: "https://zzperformance.com/products/12-front-brake-kit"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/suspension-brakes-zzp-sonic-rear-disc-brake-conversion-kit-1_300x300.jpg?v=1540832670",
+                         url: "https://zzperformance.com/products/zzp-sonic-rear-disc-brake-conversion-kit"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/exhaust-zzp-1-4l-sonic-stainless-catback-exhaust-1_300x300.jpg?v=1540834166",
+                         url: "https://zzperformance.com/products/zzp-1-4l-sonic-stainless-catback-exhaust"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/8236_front_300x300.png?v=1546975147",
+                         url: "https://zzperformance.com/products/msd-coil-pack"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/SonicBigTurbo6_300x300.png?v=1551287110",
+                         url: "https://zzperformance.com/products/zzp-big-wheel-turbo"
                     }
                ],
                icons: [
                     "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    // "assets/icons/piston.png",
+                    // "assets/icons/turbo.png",
+                    // "assets/icons/coilover.png",
+                    // "assets/icons/gauge.png"
                ]
           },
           {
                title: "Slingshot",
-               poster: "assets/car-8.jpg",
+               poster: "assets/slingshot/photo-gallery/slingshot-07.jpg",
+               posterMobile: "assets/slingshot/photo-gallery/slingshot-mobile-01.jpg",
                facts: [
-                    "Slingshot fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Slingshot fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Slingshot fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Slingshot fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    "Slingshot fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "Our manual transmission SlingShot holds the record for the fastest quarter-mile record pulling in at 12.21 seconds and topping out at 118.67mph.",
+                    "Not only does it dominate the quarter-mile, but it's also the fastest stock bottom end Slingshot in a standing half-mile, reaching a top speed of 131.12mph on 9psi 93 octane fuel. ",
+                    // "Slingshot fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "Slingshot fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    // "Slingshot fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
-               gallery: [],
+               gallery: [
+                    "assets/slingshot/photo-gallery/slingshot-01.jpg",
+                    "assets/slingshot/photo-gallery/slingshot-02.jpg",
+                    "assets/slingshot/photo-gallery/slingshot-03.jpg",
+                    "assets/slingshot/photo-gallery/slingshot-04.jpg",
+                    "assets/slingshot/photo-gallery/slingshot-05.jpg",
+                    "assets/slingshot/photo-gallery/slingshot-06.jpg",
+               ],
                mods: [
                     {
-                         photo: "assets/",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/polaris-slingshot-polaris-slingshot-turbo-kit-1_300x300.jpg?v=1540837148",
+                         url: "https://zzperformance.com/products/polaris-slingshot-turbo-kit"
                     },
                     {
-                         photo: "assets/",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/electronics-n2mb-wot-box-1_300x.jpg?v=1540837439",
+                         url: "https://zzperformance.com/collections/slingshot/products/n2mb-wot-box"
                     },
                     {
-                         photo: "",
-                         url: ""
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/ForgedCoatedLJSLE5_300x300.png?v=1550080425",
+                         url: "https://zzperformance.com/collections/slingshot/products/forged-coated-pistons-for-lsj-le5"
                     },
                     {
-                         photo: "",
-                         url: ""
-                    }
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-ecotec-4340-connecting-rods-1_300x300.jpg?v=1540835235",
+                         url: "https://zzperformance.com/products/ecotec-4340-connecting-rods"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/fueling-siemens-80-injectors-4-1_d53ae2c1-3a4b-43d6-ab0b-0ea53b791adc_300x300.jpg?v=1556192732",
+                         url: "https://zzperformance.com/products/siemens-80-injectors-5"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/polaris-slingshot-slingshot-rear-mount-radiator-kit-1_300x.jpg?v=1540837507",
+                         url: "https://zzperformance.com/products/rear-mount-radiator-kit"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/camshafts-valvetrain-82-ecotec-valve-springs-titanium-retainers-1_300x300.jpg?v=1540833923",
+                         url: "https://zzperformance.com/collections/slingshot/products/82-ecotec-valve-springs-titanium-retainers"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/gauge-gauge-pods-aem-temperature-gauge-1_300x300.jpg?v=1540835453",
+                         url: "https://zzperformance.com/products/aem-temperature-gauge"
+                    },
+                    {
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/gauge-gauge-pods-aem-wideband-failsafe-gauge-1_300x300.jpg?v=1540835049",
+                         url: "https://zzperformance.com/collections/slingshot/products/aem-wideband-failsafe-gauge"
+                    },
+                    // {
+                    //      photo: "https:",
+                    //      url: ""
+                    // }
                ],
                icons: [
                     "assets/icons/wheel.png",
                     "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    // "assets/icons/turbo.png",
+                    // "assets/icons/coilover.png",
+                    // "assets/icons/gauge.png"
                ]
           },
           {
                title: "2-Tone Cobalt",
                poster: "assets/car-9.jpg",
+               posterMobile: "assets/car-9.jpg",
                facts: [
                     "2-Tone Cobalt fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "2-Tone Cobalt fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
@@ -541,11 +611,11 @@ $(() => {
                gallery: [],
                mods: [
                     {
-                         photo: "assets/",
+                         photo: "https:",
                          url: ""
                     },
                     {
-                         photo: "assets/",
+                         photo: "https:",
                          url: ""
                     },
                     {
@@ -574,22 +644,29 @@ $(() => {
      let firstVisible = $(visibleCarProfiles).first();
      let lastVisible = $(visibleCarProfiles).last();
      //array of the rest of the cars
-     let hiddenCarProfiles = [carProfiles[3], carProfiles[4], carProfiles[5], carProfiles[6], carProfiles[7], carProfiles[8]];
+     // let hiddenCarProfiles = [carProfiles[3], carProfiles[4], carProfiles[5], carProfiles[6], carProfiles[7], carProfiles[8]];
+     let hiddenCarProfiles = [carProfiles[3], carProfiles[6], carProfiles[7]];
+
      // let firstHidden = $(hiddenCarProfiles).first();
      // let lastHidden = $(hiddenCarProfiles).last();
 
 
-     console.log(visibleCarProfiles);
-     console.log(hiddenCarProfiles);
+     // console.log(visibleCarProfiles);
+     // console.log(hiddenCarProfiles);
 
 
 
 
      function updateCards(visible) {
-          $(`.card-1`).css("background-image", `url("${visible[0].poster}")`);
-          $(`.card-2`).css("background-image", `url("${visible[1].poster}")`);
-          $(`.card-3`).css("background-image", `url("${visible[2].poster}")`);
-
+          if (screenWidth <= 600) {
+               $(`.card-1`).css("background-image", `url("${visible[0].posterMobile}")`);
+               $(`.card-2`).css("background-image", `url("${visible[1].posterMobile}")`);
+               $(`.card-3`).css("background-image", `url("${visible[2].posterMobile}")`);
+          } else {
+               $(`.card-1`).css("background-image", `url("${visible[0].poster}")`);
+               $(`.card-2`).css("background-image", `url("${visible[1].poster}")`);
+               $(`.card-3`).css("background-image", `url("${visible[2].poster}")`);
+          }
           $(`.car-title-1`).text(visible[0].title);
           $(`.car-title-2`).text(visible[1].title);
           $(`.car-title-3`).text(visible[2].title);
@@ -598,6 +675,8 @@ $(() => {
      updateCards(visibleCarProfiles);
 
      function isNext() {
+          console.log(`vis: ${visibleCarProfiles.length}`);
+          console.log(`hid: ${hiddenCarProfiles.length}`);
           visibleCarProfiles.push(hiddenCarProfiles[0]);
           hiddenCarProfiles.push(visibleCarProfiles[0]);
           visibleCarProfiles.shift();
@@ -606,7 +685,9 @@ $(() => {
      }
 
      function isPrevious() {
-          visibleCarProfiles.unshift(hiddenCarProfiles[5]);
+          console.log(`vis: ${visibleCarProfiles.length}`);
+          console.log(`hid: ${hiddenCarProfiles.length}`);
+          visibleCarProfiles.unshift(hiddenCarProfiles[(hiddenCarProfiles.length - 1)]);
           hiddenCarProfiles.unshift(visibleCarProfiles[3]);
           visibleCarProfiles.pop();
           hiddenCarProfiles.pop();
@@ -631,7 +712,10 @@ $(() => {
 
                if (screenWidth < 600) {
                     if (targetPositionX <= 90 || targetPositionX >= 300) {
-                         isPrevious();
+                         isNext();
+
+
+
                          // hiddenCarProfiles.push(visibleCarProfiles[0]);
                          // visibleCarProfiles.push(hiddenCarProfiles[0]);
 
@@ -650,7 +734,7 @@ $(() => {
                if (screenWidth >= 600 && screenWidth <= 768) {
                     if (targetPositionX < 300 || targetPositionX >= 800) {
                          console.log(`position X: ${targetPositionX}`);
-                         isPrevious();
+                         isNext();
                          // hiddenCarProfiles.push(visibleCarProfiles[0]);
                          // visibleCarProfiles.push(hiddenCarProfiles[0]);
 
@@ -728,15 +812,29 @@ $(() => {
 `)
           });
 
-          // $(`.photo-gallery-item`).on(`click`, (e) => {
-          //      console.log(e);
-          //      $($(e.currentTarget).css({
-          //           "width": "600px",
-          //           "height": "600px",
-          //           "position": "absolute",
-          //           "z-index": "2000"
-          //      }));
-          // })
+          if (screenWidth > 831)
+          $(`.photo-gallery-item`).on(`click`, (e) => {
+               clickCount++;
+
+               if (clickCount === 1) {
+
+               console.log(e);
+               $($(e.currentTarget).animate({
+                    "width": "750px",
+                    "height": "540px",
+                    "position": "fixed",
+                    "z-index": "2000"
+               }));
+          } else {
+               clickCount = 0;
+               $($(e.currentTarget).animate({
+                    "width": "348px",
+                    "height": "242px",
+                    "position": "unset",
+                    "z-index": "unset"
+               }));
+          }
+          })
      }
 
 

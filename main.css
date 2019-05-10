@@ -143,7 +143,7 @@ body {
     font-size: 53px;
     align-self: center;
     opacity: .8;
-    text-align: left;
+    text-align: center;
     width: 270px;
 
 }
@@ -154,6 +154,7 @@ body {
     z-index: 300;
     top: 525px;
     left: -30px;
+    /* background-position-x: -80px; */
     
 }
 
@@ -446,8 +447,8 @@ body {
     }
 
     .mod-gallery-item {
-        width: 200px;
-        height: 200px;
+        width: 348px;
+        height: 348px;
     }
 
     .photo-gallery-item:hover {
