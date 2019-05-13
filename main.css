@@ -79,7 +79,7 @@ body {
 
 #popup-container {
     display: none;
-    margin-top: 5%;
+    margin-top: 25px;
     flex-direction: column;
     width: 88vw;
     height: 88vh;
@@ -424,8 +424,8 @@ body {
         display: none;
         /* margin-top: 1%; */
         flex-direction: column;
-        width: 70vw;
-        height: 90vh;
+        width: 55vw;
+        height: 95vh;
         background-color: #F8F8F8;
         z-index: 1000;
         opacity: 0.98;

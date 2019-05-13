@@ -21,8 +21,8 @@ $(() => {
      let carProfiles = [
           {
                title: "Snobalt",
-               poster: "assets/snobalt/photo-gallery/snobalt-01.jpg",
-               posterMobile: "assets/snobalt/photo-gallery/snobalt-mobile-01.jpg",
+               poster: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-01.jpg",
+               posterMobile: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-mobile-01.jpg",
                facts: [
                     "The Snobalt is the only Cobalt to win a domestic vehicle class at the world touring WekFest Car Show.",
                     "It has the second highest horse power, putting out as much as 612hp at the wheels. ",
@@ -31,60 +31,60 @@ $(() => {
                     // "Snobalt fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit."
                ],
                gallery: [
-                    "assets/snobalt/photo-gallery/snobalt-01.jpg",
-                    "assets/snobalt/photo-gallery/snobalt-02.jpg",
-                    "assets/snobalt/photo-gallery/snobalt-03.jpg",
-                    "assets/snobalt/photo-gallery/snobalt-07.jpg",
-                    "assets/snobalt/photo-gallery/snobalt-05.jpg",
-                    "assets/snobalt/photo-gallery/snobalt-06.jpg"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-01.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-02.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-03.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-07.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-05.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/snobalt-06.jpg"
                ],
                mods: [
                     {
-                         photo: "assets/snobalt/mod-gallery/gen3-raceblock.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-zzp-girdled-gen3-block-1_300x300.jpg?v=1540834786",
                          url: "https://zzperformance.com/products/zzp-girdled-gen3-block"
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/ported-head.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-ecotec-ported-head-1_300x.jpg?v=1540835704",
                          url: "https://zzperformance.com/products/ecotec-ported-head"
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/lash-adjusters.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/camshafts-valvetrain-lash-adjusters-1_large_cropped.jpg?v=1540832567",
                          url: "https://zzperformance.com/products/lash-adjusters",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/4340-rods.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-ecotec-4340-connecting-rods-1_300x300.jpg?v=1540835235",
                          url: "https://zzperformance.com/products/ecotec-4340-connecting-rods",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/balance-shafts.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-neutral-balance-shafts-1_300x300.jpg?v=1540834491",
                          url: "https://zzperformance.com/products/neutral-balance-shafts-1",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/turbo-manifold.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/exhaust-ecotec-stainless-turbo-manifold-1_300x300.jpg?v=1540836193",
                          url: "https://zzperformance.com/products/ecotec-stainless-turbo-manifold",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/aluminum-radiator.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-zzp-oversized-aluminum-radiator-1_300x300.jpg?v=1540834636",
                          url: "https://zzperformance.com/products/zzp-oversized-aluminum-radiator",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/front-trans-mount.png",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/ZZ-RTMNT-FNT_300x300.png?v=1549468680",
                          url: "https://zzperformance.com/products/front-trans-mount",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/upper-intercooler-pipe.png",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/ZZ-LNFUPICP_300x300.png?v=1549485076",
                          url: "https://zzperformance.com/products/lnf-upper-intercooler-pipe",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/lower-intercooler-pipe.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/intercooling-lnf-lower-intercooler-pipe-1_300x300.jpg?v=1540836209",
                          url: "https://zzperformance.com/products/lnf-lower-intercooler-pipe",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/turbo-swap-intake.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/turbo-parts-kits-zzp-turbo-swap-intake-1_300x300.jpg?v=1540836303",
                          url: "https://zzperformance.com/products/zzp-turbo-swap-intake-1",
                     },
                     {
-                         photo: "assets/snobalt/mod-gallery/triple-gauge-pod.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/gauge-gauge-pods-cobalt-coupe-a-pillar-triple-gauge-pod-1_300x300.jpg?v=1540833486",
                          url: "https://zzperformance.com/products/cobalt-coupe-a-pillar-triple-gauge-pod",
                     }
 
@@ -95,93 +95,93 @@ $(() => {
 
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    // "assets/icons/coilover.png",
-                    // "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
 
           },
           {
                title: "Camaro",
-               poster: "assets/camaro/photo-gallery/camaro-01.jpg",
-               posterMobile: "assets/camaro/photo-gallery/camaro-mobile-01.jpg",
+               poster: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-01.jpg",
+               posterMobile: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-mobile-01.jpg",
 
                facts: [
-                    // "camaro fact one. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    // "camaro fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-                    // "camaro fact three. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "In its current state, the ZZP Camaro puts out around 325 hp and 375 torque.",
+                    "Its personal best lap time at Ginerman raceway is 00:01:46:12.",
+                    "It is also the first Camaro to sport Forgestar F10 D Wheels.",
                     // "camaro fact four. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     // "camaro fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
                gallery: [
-                    "assets/camaro/photo-gallery/camaro-01.jpg",
-                    "assets/camaro/photo-gallery/camaro-02.jpg",
-                    "assets/camaro/photo-gallery/camaro-03.jpg",
-                    "assets/camaro/photo-gallery/camaro-04.jpg",
-                    "assets/camaro/photo-gallery/camaro-05.jpg",
-                    "assets/camaro/photo-gallery/camaro-06.jpg"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-01.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-02.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-03.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-04.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-05.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/camaro-06.jpg"
                ],
                mods: [
                     {
-                         photo: "assets/camaro/mod-gallery/forged-pistons.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-je-forged-ltg-pistons-1_300x300.jpg?v=1540837176",
                          url: "https://zzperformance.com/products/je-pistons-for-ltg-2-0"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/4340-connecting-rods.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/engine-ltg-4340-connecting-rods-1_300x.jpg?v=1540836619",
                          url: "https://zzperformance.com/products/ltg-4340-connecting-rods"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/performance-cams.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/camshafts-valvetrain-zzp-ltg-performance-cams-3_300x300.jpg?v=1540835366",
                          url: "https://zzperformance.com/products/zzp-ltg-performance-cams"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/valve-springs.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/camshafts-valvetrain-82-ltg-valve-springs-1_300x.jpg?v=1540835264",
                          url: "https://zzperformance.com/products/82-ltg-valve-springs"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/ltg-downpipe.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/exhaust-awd-rwd-ltg-downpipe-1_300x300.jpg?v=1540835671",
                          url: "https://zzperformance.com/products/awd-rwd-ltg-downpipe"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/ltg-cai.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/air-intake-zzp-camaro-2-0l-cold-air-intake-1_300x300.jpg?v=1540837152",
                          url: "https://zzperformance.com/products/zzp-camaro-2-0l-cold-air-intake"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/ltg-ic-kit.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/intercooling-camaro-intercooler-kit-1_300x300.jpg?v=1540837006",
                          url: "https://zzperformance.com/products/camaro-intercooler-kit"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/e85-conversion.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/fueling-zzp-ltg-e85-flex-fuel-conversion-kit-1_300x300.jpg?v=1540835819",
                          url: "https://zzperformance.com/products/ltg-e85-flex-fuel-conversion-kit"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/ltg-throttle-body.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/air-intake-ltg-larger-throttle-body-kit-2_300x300.jpg?v=1540836763",
                          url: "https://zzperformance.com/products/ltg-larger-throttle-body-kit"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/catch-can.png",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/CamaroCatchCan1_300x300.png?v=1548255557",
                          url: "https://zzperformance.com/products/zzp-catch-can"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/ltg-heat-shield.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/exhaust-ltg-turbo-heat-shield-1_300x.jpg?v=1540836382",
                          url: "https://zzperformance.com/products/ltg-turbo-heat-shield"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/coilovers.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/suspension-brakes-bc-racing-coilovers-1_66088286-ef2d-4de8-996d-2b86ed6126c5_300x300.jpg?v=1540836219",
                          url: "https://zzperformance.com/collections/ats/products/ats-cts-bc-racing-coilovers"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/front-sway-bar.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/suspension-brakes-zzp-front-sway-bar-5_300x300.jpg?v=1540837132",
                          url: "https://zzperformance.com/products/zzp-front-sway-bar-1"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/trailing-arms.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/suspension-brakes-zzp-ats-trailing-arms-1_bb8a472f-ada9-4ecd-9553-d4c202e090cc_300x300.jpg?v=1541515325",
                          url: "https://zzperformance.com/products/zzp-camaro-trailing-arms"
                     },
                     {
-                         photo: "assets/camaro/mod-gallery/dual-gauge-pod.jpg",
+                         photo: "https://cdn.shopify.com/s/files/1/0022/0718/7055/products/ZZ-2POD-CAM_300x.jpg?v=1540848694",
                          url: "https://zzperformance.com/products/camaro-dual-gauge-pillar-pod"
                     },
                     // {
@@ -191,18 +191,18 @@ $(() => {
     
                ],
                icons: [
-                    // "assets/icons/wheel.png",
-                    // "assets/icons/piston.png",
-                    // "assets/icons/turbo.png",
-                    // "assets/icons/coilover.png",
-                    // "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
 
           },
           {
                title: "WallPaper",
-               poster: "assets/ats-wallpaper/photo-gallery/wallpaper-03.jpg",
-               posterMobile: "assets/ats-wallpaper/photo-gallery/wallpaper-mobile-01.jpg",
+               poster: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-03.jpg",
+               posterMobile: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-mobile-01.jpg",
                facts: [
                     "The ZZP Wallpaper ATS is the highest WHP ATS, topping out at 456 WHP.",
                     "It was also chosen to be a display vehicle for SEMA 2014.",
@@ -211,12 +211,12 @@ $(() => {
                     // "ATS Wallpaper fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
                gallery: [
-                    "assets/ats-wallpaper/photo-gallery/wallpaper-07.jpg",
-                    "assets/ats-wallpaper/photo-gallery/wallpaper-02.jpg",
-                    "assets/ats-wallpaper/photo-gallery/wallpaper-03.jpg",
-                    "assets/ats-wallpaper/photo-gallery/wallpaper-04.jpg",
-                    "assets/ats-wallpaper/photo-gallery/wallpaper-05.jpg",
-                    "assets/ats-wallpaper/photo-gallery/wallpaper-06.jpg"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-07.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-02.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-03.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-04.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-05.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wallpaper-06.jpg"
                ],
                mods: [
                     {
@@ -321,17 +321,17 @@ $(() => {
                     },
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    // "assets/icons/coilover.png",
-                    // "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ],
           },
           {
                title: "ATS-V",
-               poster: "assets/ats-v/photo-gallery/atsv-02.jpg",
-               posterMobile: "assets/ats-v/photo-gallery/atsv-mobile-01.jpg",
+               poster: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-02.jpg",
+               posterMobile: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-mobile-01.jpg",
 
                facts: [
                     "Our ATS-V is the fastest on the planet and can go from 0 to 134mph in 10.34 seconds.",
@@ -341,12 +341,12 @@ $(() => {
                     // "ATS-V fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
                gallery: [
-                    "assets/ats-v/photo-gallery/atsv-01.jpg",
-                    "assets/ats-v/photo-gallery/atsv-02.jpg",
-                    "assets/ats-v/photo-gallery/atsv-03.jpg",
-                    "assets/ats-v/photo-gallery/atsv-04.jpg",
-                    // "assets/ats-v/photo-gallery/atsv-01.jpg",
-                    // "assets/ats-v/photo-gallery/atsv-01.jpg"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-01.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-02.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-03.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-04.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-05.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/atsv-06.jpg"
                ],
                mods: [
                     {
@@ -380,11 +380,11 @@ $(() => {
                     
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
           },
           {
@@ -418,11 +418,11 @@ $(() => {
                     }
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
           },
           {
@@ -456,17 +456,17 @@ $(() => {
                     }
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
           },
           {
                title: "Sonic",
-               poster: "assets/sonic-ltz/photo-gallery/sonic-04.jpg",
-               posterMobile: "assets/sonic-ltz/photo-gallery/sonic-mobile-01.jpg",
+               poster: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-04.jpg",
+               posterMobile: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-mobile-01.jpg",
                facts: [
                     "Our Sonic LTZ's fastest 1/4 mile time is 13.65 seconds, hitting a top speed of 105 mph.",
                     // "Sonic fact two. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
@@ -475,12 +475,12 @@ $(() => {
                     // "Sonic fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
                gallery: [
-                    "assets/sonic-ltz/photo-gallery/sonic-01.jpg",
-                    "assets/sonic-ltz/photo-gallery/sonic-02.jpg",
-                    "assets/sonic-ltz/photo-gallery/sonic-03.jpg",
-                    "assets/sonic-ltz/photo-gallery/sonic-04.jpg",
-                    "assets/sonic-ltz/photo-gallery/sonic-05.jpg",
-                    "assets/sonic-ltz/photo-gallery/sonic-06.jpg"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-01.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-02.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-03.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-04.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-05.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/sonic-06.jpg"
                ],
                mods: [
                     {
@@ -521,17 +521,17 @@ $(() => {
                     }
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    // "assets/icons/piston.png",
-                    // "assets/icons/turbo.png",
-                    // "assets/icons/coilover.png",
-                    // "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
           },
           {
                title: "Slingshot",
-               poster: "assets/slingshot/photo-gallery/slingshot-07.jpg",
-               posterMobile: "assets/slingshot/photo-gallery/slingshot-mobile-01.jpg",
+               poster: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-07.jpg",
+               posterMobile: "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-mobile-01.jpg",
                facts: [
                     "Our manual transmission SlingShot holds the record for the fastest quarter-mile record pulling in at 12.21 seconds and topping out at 118.67mph.",
                     "Not only does it dominate the quarter-mile, but it's also the fastest stock bottom end Slingshot in a standing half-mile, reaching a top speed of 131.12mph on 9psi 93 octane fuel. ",
@@ -540,12 +540,12 @@ $(() => {
                     // "Slingshot fact five. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                ],
                gallery: [
-                    "assets/slingshot/photo-gallery/slingshot-01.jpg",
-                    "assets/slingshot/photo-gallery/slingshot-02.jpg",
-                    "assets/slingshot/photo-gallery/slingshot-03.jpg",
-                    "assets/slingshot/photo-gallery/slingshot-04.jpg",
-                    "assets/slingshot/photo-gallery/slingshot-05.jpg",
-                    "assets/slingshot/photo-gallery/slingshot-06.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-01.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-02.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-03.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-04.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-05.jpg",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/slingshot-06.jpg",
                ],
                mods: [
                     {
@@ -590,11 +590,11 @@ $(() => {
                     // }
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    // "assets/icons/turbo.png",
-                    // "assets/icons/coilover.png",
-                    // "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    // "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
           },
           {
@@ -628,11 +628,11 @@ $(() => {
                     }
                ],
                icons: [
-                    "assets/icons/wheel.png",
-                    "assets/icons/piston.png",
-                    "assets/icons/turbo.png",
-                    "assets/icons/coilover.png",
-                    "assets/icons/gauge.png"
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/wheel.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/piston.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/turbo.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/coilover.png",
+                    "https://cdn.shopify.com/s/files/1/0022/0718/7055/files/gauge.png"
                ]
           },
      ]
