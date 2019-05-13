@@ -714,35 +714,21 @@ $(() => {
                     if (targetPositionX <= 90 || targetPositionX >= 300) {
                          isNext();
 
-
-
-                         // hiddenCarProfiles.push(visibleCarProfiles[0]);
-                         // visibleCarProfiles.push(hiddenCarProfiles[0]);
-
-                         // visibleCarProfiles.shift();
-                         // hiddenCarProfiles.shift();
-
-                         // updateCards(visibleCarProfiles);
-
-
-                         $(`.card-1`).css({ "left": `${-30}px`, "top": `${525}px`, "z-index": 300 });
+                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 300 });
                          $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
-                         $(`.card-3`).css({ "left": `${30}px`, "top": `${-525}px`, "z-index": 100 });
+                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 100 });
 
+                    } else {
+                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 300 });
+                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
+                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 100 });
                     }
                }
                if (screenWidth >= 600 && screenWidth <= 768) {
                     if (targetPositionX < 300 || targetPositionX >= 800) {
                          console.log(`position X: ${targetPositionX}`);
                          isNext();
-                         // hiddenCarProfiles.push(visibleCarProfiles[0]);
-                         // visibleCarProfiles.push(hiddenCarProfiles[0]);
-
-                         // visibleCarProfiles.shift();
-                         // hiddenCarProfiles.shift();
-
-                         // updateCards(visibleCarProfiles);
-
+  
                          $(`.card-1`).css({ "left": `${55}px`, "top": `${0}px`, "z-index": 300 });
                          $(`.card-2`).css({ "left": `${90}px`, "top": `${-525}px`, "z-index": 200 });
                          $(`.card-3`).css({ "left": `${130}px`, "top": `${-1050}px`, "z-index": 100 });
@@ -845,6 +831,7 @@ $(() => {
           targetLeft = $(e.target).css("left");
 
      }).on("touchmove", function (e) {
+          console.log(e);
           target = e.currentTarget;
           targetPositionX = e.targetTouches[0].pageX;
           nextTarget = $(target).next();
@@ -856,7 +843,9 @@ $(() => {
 
      }).on("click", function (e) {
           $(`#popup-container`).fadeIn("slow").css("display", "flex");
+          if (screenWidth >= 831) {
           $(`.slider-buttons`).toggle();
+     }
           selected = e.currentTarget.className;
           isSelected();
 
@@ -864,7 +853,9 @@ $(() => {
 
      $(`#exit-button`).on("click", function (e) {
           $(`#popup-container`).fadeOut("slow");
+          if (screenWidth >= 831) {
           $(`.slider-buttons`).toggle();
+          }
      })
 
      $(`#previous-button`).on("click", function (e) {

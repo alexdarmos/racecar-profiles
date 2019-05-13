@@ -1,4 +1,4 @@
-body {
+.vehicle-wrapper {
     display: flex;
     justify-content: center;
     /* flex-direction: column; */
@@ -29,6 +29,7 @@ body {
 #racecar-flex-card-container {
     display: flex;
     position: absolute;
+    z-index: 10;
     top: 0px;
     left: 0px;
     height: 100%;
@@ -66,7 +67,7 @@ body {
 .invisible-wall {
     width: 100vw;
     height: 100%;
-    z-index: 250;
+    z-index: 25;
     background-color: white;
     opacity: 0;
     position: absolute;
@@ -84,7 +85,7 @@ body {
     width: 88vw;
     height: 88vh;
     background-color: #F8F8F8;
-    z-index: 1000;
+    z-index: 100;
     opacity: 0.98;
     overflow-y: scroll;
     padding: 5px;
@@ -153,7 +154,7 @@ body {
     /* background-image: url('assets/Wing-small.jpg'); */
     z-index: 300;
     top: 525px;
-    left: -30px;
+    left: -20px;
     /* background-position-x: -80px; */
     
 }
@@ -163,7 +164,7 @@ body {
     /* background-color: lightcoral; */
     /* background-image: url('assets/CamaroGrandville-small.jpg'); */
     background-size: cover;
-    z-index: 200;
+    z-index: 20;
     top: 0px;
     left: 0px;
     opacity: .6;
@@ -175,9 +176,9 @@ body {
     position: relative;
     /* background-image: url('assets/ats-small.jpg'); */
     background-size: cover;
-    z-index: 100;
+    z-index: 10;
     top: -525px;
-    left: 30px;
+    left: 20px;
     opacity: .4;
 
 }
@@ -239,7 +240,7 @@ body {
     .card-1 {
         position: relative;
         /* background-image: url(assets/Wing-small.jpg); */
-        z-index: 300;
+        z-index: 30;
         top: 0px;
         left: 55px;
     }
@@ -249,7 +250,7 @@ body {
         /* background-color: lightcoral; */
         /* background-image: url(assets/CamaroGrandville-small.jpg); */
         background-size: cover;
-        z-index: 200;
+        z-index: 20;
         top: -525px;
         left: 90px;
     }
@@ -258,7 +259,7 @@ body {
         position: relative;
         /* background-image: url(assets/ats-small.jpg); */
         background-size: cover;
-        z-index: 100;
+        z-index: 10;
         top: -1050px;
         left: 130px;
     }
@@ -266,7 +267,7 @@ body {
     /* .invisible-wall {
         width: 650px;
         height: 530px;
-        z-index: 250;
+        z-index: 25;
         background-color: white;
         opacity: .6;
         position: absolute;
@@ -281,7 +282,7 @@ body {
         width: 700px;
         height: 75vh;
         background-color: #F8F8F8;
-        z-index: 1000;
+        z-index: 100;
         opacity: 0.98;
         overflow-y: scroll;
         padding: 5px;
@@ -298,7 +299,7 @@ body {
 }
 
 @media only screen and (min-width: 831px) {
-    body {
+    .vehicle-wrapper {
         display: flex;
         justify-content: center;
         /* flex-direction: column; */
@@ -323,7 +324,7 @@ body {
 
     /* .card-1 {
         position: relative;
-        z-index: 100;
+        z-index: 10;
         width: auto;
         height: 525px;
         top: 25px;
@@ -333,7 +334,7 @@ body {
 
     .card-1 {
         position: relative;
-        z-index: 100;
+        z-index: 10;
         width: auto;
         height: 550px;
         top: -31px;
@@ -343,7 +344,7 @@ body {
     }
 
     .card-2 {
-        z-index: 200;
+        z-index: 20;
         top: unset;
         width: 550px;
         min-width: 500px;
@@ -354,7 +355,7 @@ body {
 
     /* .card-3 {
         position: relative;
-        z-index: 100;
+        z-index: 10;
         top: 25px;
         left: -125px;
         width: auto;
@@ -364,7 +365,7 @@ body {
 
     .card-3 {
         position: relative;
-        z-index: 100;
+        z-index: 10;
         top: -31px;
         left: 7px;
         width: auto;
@@ -377,7 +378,7 @@ body {
     margin: 0 auto;
     background-color: white;
     opacity: 0;
-    z-index: 150;
+    z-index: 15;
     margin-top: -10%;
     height: 100%;
     width: 100vw;
@@ -401,7 +402,7 @@ body {
         /* width: 100px; */
         border: none;
         background-color: unset;
-        z-index: 2000;
+        z-index: 20;
         
     }
 
@@ -427,7 +428,7 @@ body {
         width: 56vw;
         height: 95vh;
         background-color: #F8F8F8;
-        z-index: 1000;
+        z-index: 100;
         opacity: 0.98;
         overflow-y: scroll;
         /* border: solid 1px black; */
@@ -474,11 +475,4 @@ body {
     }
 
     /* .test {} */
-
-
-
-
-
-
-
 }
