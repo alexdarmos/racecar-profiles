@@ -714,14 +714,14 @@ $(() => {
                     if (targetPositionX <= 90 || targetPositionX >= 300) {
                          isNext();
 
-                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 300 });
-                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
-                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 100 });
+                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 30 });
+                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 20 });
+                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 10 });
 
                     } else {
-                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 300 });
-                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 200 });
-                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 100 });
+                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 30 });
+                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 20 });
+                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 10 });
                     }
                }
                if (screenWidth >= 600 && screenWidth <= 768) {
@@ -729,9 +729,9 @@ $(() => {
                          console.log(`position X: ${targetPositionX}`);
                          isNext();
   
-                         $(`.card-1`).css({ "left": `${55}px`, "top": `${0}px`, "z-index": 300 });
-                         $(`.card-2`).css({ "left": `${90}px`, "top": `${-525}px`, "z-index": 200 });
-                         $(`.card-3`).css({ "left": `${130}px`, "top": `${-1050}px`, "z-index": 100 });
+                         $(`.card-1`).css({ "left": `${55}px`, "top": `${0}px`, "z-index": 30 });
+                         $(`.card-2`).css({ "left": `${90}px`, "top": `${-525}px`, "z-index": 20 });
+                         $(`.card-3`).css({ "left": `${130}px`, "top": `${-1050}px`, "z-index": 10 });
                     }
                }
 
