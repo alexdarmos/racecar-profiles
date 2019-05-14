@@ -58,7 +58,7 @@
     justify-content: center;
     flex-direction: column;
     width:280px;
-    height: 500px;
+    height: 480px;
     /* border: solid 1px black; */
     background-size: cover;
     background-repeat: no-repeat;
@@ -151,21 +151,17 @@
 
 .card-1 {
     position: relative;
-    /* background-image: url('assets/Wing-small.jpg'); */
     z-index: 300;
-    top: 525px;
-    left: -20px;
-    /* background-position-x: -80px; */
+    top: 475px;
+    left: 20px;
     
 }
 
 .card-2 {
     position: relative;
-    /* background-color: lightcoral; */
-    /* background-image: url('assets/CamaroGrandville-small.jpg'); */
     background-size: cover;
     z-index: 20;
-    top: 0px;
+    top: 10px;
     left: 0px;
     opacity: .6;
 
@@ -174,11 +170,10 @@
 
 .card-3 {
     position: relative;
-    /* background-image: url('assets/ats-small.jpg'); */
     background-size: cover;
     z-index: 10;
-    top: -525px;
-    left: 20px;
+    top: -455px;
+    left: -20px;
     opacity: .4;
 
 }
@@ -210,8 +205,67 @@
     padding: 5px;
 }
 
+.slider-guide {
+    display: flex;
+    flex-direction:row;
+    z-index: 99;
+    position: absolute;
+    top: 0px;
+}
 
-@media only screen and (min-width: 600px) and (max-width: 830px) {
+.slider-arrow {
+    height: auto;
+    width: 50px;
+}
+
+.slider-arrow-right-3, .slider-arrow-left-3 {
+    opacity: .3;
+}
+
+
+.animate-2{
+    animation: fade 4s infinite ease-in-out;
+    animation-delay: 1s;
+    opacity: 0
+}
+.animate-1{
+    animation: fade 4s infinite ease-in-out;
+    animation-delay: 2s;
+    opacity: 0
+}
+
+.slider-arrow-left-1, .slider-arrow-left-2 {
+    margin-right: -25px;
+}
+
+.slider-arrow-right-1, .slider-arrow-right-2 {
+    margin-left: -25px;
+}
+
+.slider-guide-text {
+    text-align: center;
+    font-size: 26px;
+    height: 35px;
+    align-self: center;
+    color: #ccc;
+    opacity: .8;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    25% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+    .slider-guide {
+        position: absolute;
+        top: 765px;
+    }
+
     #racecar-flex-card-container {
         display: flex;
         margin-top: 33%;
@@ -220,7 +274,7 @@
         left: unset;
         height: unset;
         width: 98%;
-        justify-content: unset;
+        justify-content: center;
         flex-direction: unset;
         flex-wrap: wrap;
         align-content: unset;
@@ -242,7 +296,7 @@
         /* background-image: url(assets/Wing-small.jpg); */
         z-index: 30;
         top: 0px;
-        left: 55px;
+        left: 0px;
     }
 
     .card-2 {
@@ -252,7 +306,7 @@
         background-size: cover;
         z-index: 20;
         top: -525px;
-        left: 90px;
+        left: 20px;
     }
 
     .card-3 {
@@ -261,35 +315,8 @@
         background-size: cover;
         z-index: 10;
         top: -1050px;
-        left: 130px;
+        left: 40px;
     }
-
-    /* .invisible-wall {
-        width: 650px;
-        height: 530px;
-        z-index: 25;
-        background-color: white;
-        opacity: .6;
-        position: absolute;
-        top: 203px;
-        left: 88px;
-    } */
-
-    /* #popup-container {
-        display: none;
-        margin-top: 5%;
-        flex-direction: column;
-        width: 700px;
-        height: 75vh;
-        background-color: #F8F8F8;
-        z-index: 100;
-        opacity: 0.98;
-        overflow-y: scroll;
-        padding: 5px;
-        padding: 25px;
-        top: 0px;
-        position: absolute;
-    } */
 
     .car-title {
         text-align: center;
@@ -298,7 +325,10 @@
     
 }
 
-@media only screen and (min-width: 831px) {
+@media only screen and (min-width: 768px) {
+    .slider-guide{
+        display: none;
+    }
     .vehicle-wrapper {
         display: flex;
         justify-content: center;

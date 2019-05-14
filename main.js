@@ -1,5 +1,10 @@
 $(() => {
 
+     let moveTracker = false;
+     let positionMoved = 0;
+     let initialPosition = null;
+
+
      let cardCounter = 0;
      let clickCount = 0;
      let factList = [];
@@ -693,14 +698,30 @@ $(() => {
           hiddenCarProfiles.pop();
           updateCards(visibleCarProfiles);
      }
-
+console.log($(`.card-1`).css("left"))
      function isMoving() {
-          if (screenWidth < 600) {
-               newPosition = targetPositionX - 280;
-               // console.log(targetPosition);
-          } else if (screenWidth >= 600 && screenWidth <= 768) {
-               newPosition = targetPositionX - 480;
-          }
+
+
+          // if (moveTracker === true) {
+          //      positionMoved+=2;
+          //      console.log(`Position: ${positionMoved}`);
+
+          // }
+
+          newPosition = targetPositionX - initialPosition;
+
+          // if (targetPositionX > initialPosition) {
+          //      newPosition = 20 + positionMoved;
+          // } else {
+          //      newPosition = 20 - positionMoved;
+          // }
+
+          // if (screenWidth < 600) {
+          //      newPosition = targetPositionX - 280;
+          //      // console.log(targetPosition);
+          // } else if (screenWidth >= 600 && screenWidth <= 768) {
+          //      newPosition = targetPositionX - 480;
+          // }
           $(target).css("left", newPosition);
 
      }
@@ -714,14 +735,14 @@ $(() => {
                     if (targetPositionX <= 90 || targetPositionX >= 300) {
                          isNext();
 
-                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 30 });
-                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 20 });
-                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 10 });
+                         $(`.card-1`).css({ "left": `${20}px`, "top": `${475}px`, "z-index": 30 });
+                         $(`.card-2`).css({ "left": `${0}px`, "top": `${10}px`, "z-index": 20 });
+                         $(`.card-3`).css({ "left": `${-20}px`, "top": `${-455}px`, "z-index": 10 });
 
                     } else {
-                         $(`.card-1`).css({ "left": `${-20}px`, "top": `${525}px`, "z-index": 30 });
-                         $(`.card-2`).css({ "left": `${0}px`, "top": `${0}px`, "z-index": 20 });
-                         $(`.card-3`).css({ "left": `${20}px`, "top": `${-525}px`, "z-index": 10 });
+                         $(`.card-1`).css({ "left": `${20}px`, "top": `${475}px`, "z-index": 30 });
+                         $(`.card-2`).css({ "left": `${0}px`, "top": `${10}px`, "z-index": 20 });
+                         $(`.card-3`).css({ "left": `${-20}px`, "top": `${-455}px`, "z-index": 10 });
                     }
                }
                if (screenWidth >= 600 && screenWidth <= 768) {
@@ -827,18 +848,27 @@ $(() => {
 
      $(`.card`).on("touchstart", function (e) {
           targetPositionX = e.targetTouches[0].pageX;
+          initialPosition = targetPositionX;
+          console.log(`initial: ${initialPosition}`);
+
           target = e.target;
           targetLeft = $(e.target).css("left");
 
      }).on("touchmove", function (e) {
+          moveTracker = true;
+          e.preventDefault();
+
           console.log(e);
           target = e.currentTarget;
           targetPositionX = e.targetTouches[0].pageX;
+
           nextTarget = $(target).next();
           prevTarget = $(target).prev();
           isMoving();
 
      }).on("touchend", function (e) {
+          moveTracker = false;
+          positionMoved = 0;
           isReleased();
 
      }).on("click", function (e) {
