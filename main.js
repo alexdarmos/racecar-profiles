@@ -702,26 +702,11 @@ console.log($(`.card-1`).css("left"))
      function isMoving() {
 
 
-          // if (moveTracker === true) {
-          //      positionMoved+=2;
-          //      console.log(`Position: ${positionMoved}`);
 
-          // }
 
           newPosition = targetPositionX - initialPosition;
 
-          // if (targetPositionX > initialPosition) {
-          //      newPosition = 20 + positionMoved;
-          // } else {
-          //      newPosition = 20 - positionMoved;
-          // }
 
-          // if (screenWidth < 600) {
-          //      newPosition = targetPositionX - 280;
-          //      // console.log(targetPosition);
-          // } else if (screenWidth >= 600 && screenWidth <= 768) {
-          //      newPosition = targetPositionX - 480;
-          // }
           $(target).css("left", newPosition);
 
      }

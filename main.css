@@ -6,7 +6,7 @@
     margin: 0px;
 }
 
-.scrollbar {
+/* .scrollbar {
     background-color: #F5F5F5;
     float: left;
     height: 300px;
@@ -15,16 +15,16 @@
     margin-top: 40px;
     width: 65px;
     overflow-y: scroll;
-}
+} */
 
-.force-overflow {
+/* .force-overflow {
     min-height: 450px;
-}
+} */
 
-#style-1::-webkit-scrollbar {
+/* #style-1::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
-} 
+}  */
 
 #racecar-flex-card-container {
     display: flex;
