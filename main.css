@@ -1,508 +1,437 @@
 .vehicle-wrapper {
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-    width:100%;
-    margin: 0px;
+display: flex;
+justify-content: center;
+width:100%;
+margin: 0px;
 }
-
-/* .scrollbar {
-    background-color: #F5F5F5;
-    float: left;
-    height: 300px;
-    margin-bottom: 25px;
-    margin-left: 22px;
-    margin-top: 40px;
-    width: 65px;
-    overflow-y: scroll;
-} */
-
-/* .force-overflow {
-    min-height: 450px;
-} */
-
-/* #style-1::-webkit-scrollbar {
-    width: 6px;
-    background-color: #F5F5F5;
-}  */
 
 #racecar-flex-card-container {
-    display: flex;
-    position: absolute;
-    z-index: 10;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    /* width:100%; */
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;   
+display: flex;
+position: absolute;
+z-index: 10;
+top: 0px;
+left: 0px;
+height: 100%;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center;   
 }
 
-/* #racecar-card-container{
-    padding: 50px;
-    width: auto;
-} */
-
 .popup-section-title {
-    align-self: center;
-    margin: 25px 0px 25px 0px;
-    font-weight: bold;
-    text-decoration: underline;
+align-self: center;
+margin: 25px 0px 25px 0px;
+font-weight: bold;
+text-decoration: underline;
 
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width:280px;
-    height: 480px;
-    /* border: solid 1px black; */
-    background-size: cover;
-    background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+flex-direction: column;
+width:280px;
+height: 480px;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .invisible-wall {
-    width: 100vw;
-    height: 100%;
-    z-index: 25;
-    background-color: white;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
+width: 100vw;
+height: 100%;
+z-index: 25;
+background-color: white;
+opacity: 0;
+position: absolute;
+top: 0px;
 }
 
 .slider-buttons {
-    display: none;
+display: none;
 }
 
 #popup-container {
-    display: none;
-    margin-top: 25px;
-    flex-direction: column;
-    width: 88vw;
-    height: 88vh;
-    background-color: #F8F8F8;
-    z-index: 100;
-    opacity: 0.98;
-    overflow-y: scroll;
-    padding: 5px;
-    position: absolute;
+display: none;
+margin-top: 25px;
+flex-direction: column;
+width: 88vw;
+height: 88vh;
+background-color: #F8F8F8;
+z-index: 100;
+opacity: 0.98;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+padding: 5px;
+position: absolute;
 }
 
 #exit-button {
-    height: 25px;
-    width: 25px;
-    align-self: flex-end;
-    padding: 20px;
+height: 25px;
+width: 25px;
+align-self: flex-end;
+padding: 20px;
 }
 
 .details-button {
-    height: auto;
-    width: 125px;
-    opacity: .8;
-    align-self: center;
+height: auto;
+width: 125px;
+opacity: .8;
+align-self: center;
 }
 
 
 .mod-parts-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 }
 
 .mod-part-sub-container {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 35px;
+display: flex;
+flex-direction: row;
+margin-bottom: 35px;
 }
 
 .reverse-row {
-    flex-direction: row-reverse;
+flex-direction: row-reverse;
 }
 
 .icon img {
-    height: 75px;
-    /* width: auto; */
+height: 75px;
 }
 
 .description {
-    height: auto;
-    /* width: 250px; */
-
+height: auto;
 }
 
-/* .transition {
-    transition: width 2s, height 2s, transform 2s;
-    transform: rotate(-40deg);
-} */
-
 .car-title {
-    color: white;
-    font-size: 53px;
-    align-self: center;
-    opacity: .8;
-    text-align: center;
-    width: 270px;
+color: white;
+font-size: 53px;
+align-self: center;
+opacity: .8;
+text-align: center;
+width: 270px;
 
 }
 
 .card-1 {
-    position: relative;
-    z-index: 300;
-    top: 475px;
-    left: 20px;
-    
+position: relative;
+z-index: 300;
+top: 475px;
+left: 20px;
+
 }
 
 .card-2 {
-    position: relative;
-    background-size: cover;
-    z-index: 20;
-    top: 10px;
-    left: 0px;
-    opacity: .6;
+position: relative;
+background-size: cover;
+z-index: 20;
+top: 10px;
+left: 0px;
+opacity: .6;
 
 }
 
 
 .card-3 {
-    position: relative;
-    background-size: cover;
-    z-index: 10;
-    top: -455px;
-    left: -20px;
-    opacity: .4;
+position: relative;
+background-size: cover;
+z-index: 10;
+top: -455px;
+left: -20px;
+opacity: .4;
 
 }
 
 .photo-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-    
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+flex-shrink: 0;
+
 }
 
 .photo-gallery-item {    
-    width: auto;
-    height: 300px;
-    padding: 5px;
+width: auto;
+height: 300px;
+padding: 5px;
 }
 
 .mod-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+
 }
 
 .mod-gallery-item {    
-    width: auto;
-    height: 300px;
-    padding: 5px;
+width: auto;
+height: 300px;
+padding: 5px;
 }
 
 .slider-guide {
-    display: flex;
-    flex-direction:row;
-    z-index: 99;
-    position: absolute;
-    top: 0px;
+display: flex;
+flex-direction:row;
+z-index: 99;
+position: absolute;
+top: 0px;
 }
 
 .slider-arrow {
-    height: auto;
-    width: 50px;
+height: auto;
+width: 50px;
 }
 
 .slider-arrow-right-3, .slider-arrow-left-3 {
-    opacity: .3;
+opacity: .3;
 }
 
 
 .animate-2{
-    animation: fade 4s infinite ease-in-out;
-    animation-delay: 1s;
-    opacity: 0
+animation: fade 4s infinite ease-in-out;
+animation-delay: 1s;
+opacity: 0
 }
 .animate-1{
-    animation: fade 4s infinite ease-in-out;
-    animation-delay: 2s;
-    opacity: 0
+animation: fade 4s infinite ease-in-out;
+animation-delay: 2s;
+opacity: 0
 }
 
 .slider-arrow-left-1, .slider-arrow-left-2 {
-    margin-right: -25px;
+margin-right: -25px;
 }
 
 .slider-arrow-right-1, .slider-arrow-right-2 {
-    margin-left: -25px;
+margin-left: -25px;
 }
 
 .slider-guide-text {
-    text-align: center;
-    font-size: 26px;
-    height: 35px;
-    align-self: center;
-    color: #ccc;
-    opacity: .8;
+text-align: center;
+font-size: 26px;
+height: 35px;
+align-self: center;
+color: #ccc;
+opacity: .8;
 }
 
 @keyframes fade {
-    0% {opacity: 0;}
-    25% {opacity: 1;}
-    100% {opacity: 0;}
+0% {opacity: 0;}
+25% {opacity: 1;}
+100% {opacity: 0;}
 }
 
 
 
 @media only screen and (min-width: 600px) and (max-width: 768px) {
 
-    .slider-guide {
-        position: absolute;
-        top: 765px;
-    }
+.slider-guide {
+position: absolute;
+top: 765px;
+}
 
-    #racecar-flex-card-container {
-        display: flex;
-        margin-top: 33%;
-        position: unset;
-        top: unset;
-        left: unset;
-        height: unset;
-        width: 98%;
-        justify-content: center;
-        flex-direction: unset;
-        flex-wrap: wrap;
-        align-content: unset;
-    }
+#racecar-flex-card-container {
+display: flex;
+margin-top: 33%;
+position: unset;
+top: unset;
+left: unset;
+height: unset;
+width: 98%;
+justify-content: center;
+flex-direction: unset;
+flex-wrap: wrap;
+align-content: unset;
+}
 
-    .card {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 600px;
-        height: 500px;
-        /* border: solid 1px black; */
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+.card {
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 600px;
+height: 500px;
+background-size: cover;
+background-repeat: no-repeat;
+}
 
-    .card-1 {
-        position: relative;
-        /* background-image: url(assets/Wing-small.jpg); */
-        z-index: 30;
-        top: 0px;
-        left: 0px;
-    }
+.card-1 {
+position: relative;
+z-index: 30;
+top: 0px;
+left: 0px;
+}
 
-    .card-2 {
-        position: relative;
-        /* background-color: lightcoral; */
-        /* background-image: url(assets/CamaroGrandville-small.jpg); */
-        background-size: cover;
-        z-index: 20;
-        top: -525px;
-        left: 20px;
-    }
+.card-2 {
+position: relative;
+background-size: cover;
+z-index: 20;
+top: -525px;
+left: 20px;
+}
 
-    .card-3 {
-        position: relative;
-        /* background-image: url(assets/ats-small.jpg); */
-        background-size: cover;
-        z-index: 10;
-        top: -1050px;
-        left: 40px;
-    }
+.card-3 {
+position: relative;
+background-size: cover;
+z-index: 10;
+top: -1050px;
+left: 40px;
+}
 
-    .car-title {
-        text-align: center;
-    }
+.car-title {
+text-align: center;
+}
 
-    
+
 }
 
 @media only screen and (min-width: 768px) {
-    .slider-guide{
-        display: none;
-    }
-    .vehicle-wrapper {
-        display: flex;
-        justify-content: center;
-        /* flex-direction: column; */
-        width: 100%;
-        align-content: center;
-        align-self: center;
-        height: 100vh;
-    }
-
-    #racecar-flex-card-container {
-        display: flex;
-        margin-top: 80px;
-        justify-content: center;
-        top: unset;
-        left: unset;
-        height: unset;
-        width: 80vw;
-        flex-direction: unset;
-        flex-wrap: unset;
-        align-self: center;
-    }
-
-    /* .card-1 {
-        position: relative;
-        z-index: 10;
-        width: auto;
-        height: 525px;
-        top: 25px;
-        left: 125px;
-        opacity: .5;
-    } */
-
-    .card-1 {
-        position: relative;
-        z-index: 10;
-        width: auto;
-        height: 550px;
-        top: -31px;
-        left: -7px;
-        opacity: .09;
-        transform: skewY(13deg);
-    }
-
-    .card-2 {
-        z-index: 20;
-        top: unset;
-        width: 550px;
-        min-width: 500px;
-        height: 550px;
-        left: unset;
-        opacity: 1;
-    }
-
-    /* .card-3 {
-        position: relative;
-        z-index: 10;
-        top: 25px;
-        left: -125px;
-        width: auto;
-        height: 525px;
-        opacity: .5;
-    } */
-
-    .card-3 {
-        position: relative;
-        z-index: 10;
-        top: -31px;
-        left: 7px;
-        width: auto;
-        height: 550px;
-        opacity: .09;
-        transform: skewY(-13deg);
-    }
-
-    .invisible-wall {
-    margin: 0 auto;
-    background-color: white;
-    opacity: 0;
-    z-index: 15;
-    margin-top: -10%;
-    height: 100%;
-    width: 100vw;
-    position: absolute;
+.slider-guide{
+display: none;
+}
+.vehicle-wrapper {
+display: flex;
+justify-content: center;
+/* flex-direction: column; */
+width: 100%;
+align-content: center;
+align-self: center;
+height: 100vh;
 }
 
-    .slider-buttons {
-        display: flex;
-        position: absolute;
-        flex-direction: row;
-        height: auto;
-        width: 100%;
-        justify-content: space-between;
-        align-content: center;
-        align-self: center;
-    }
+#racecar-flex-card-container {
+display: flex;
+margin-top: 80px;
+justify-content: center;
+top: unset;
+left: unset;
+height: unset;
+width: 80vw;
+flex-direction: unset;
+flex-wrap: unset;
+align-self: center;
+}
 
-    .slider-buttons > button {
-        /* margin: 5px; */
-        /* height: 30px; */
-        /* width: 100px; */
-        border: none;
-        background-color: unset;
-        z-index: 20;
-        
-    }
+.card-1 {
+position: relative;
+z-index: 10;
+width: auto;
+height: 550px;
+top: -31px;
+left: -7px;
+opacity: .09;
+transform: skewY(13deg);
+}
 
-    .button > img {
-        height: 150px;
-        width: 150px;
-    }
+.card-2 {
+z-index: 20;
+top: unset;
+width: 550px;
+min-width: 500px;
+height: 550px;
+left: unset;
+opacity: 1;
+}
 
-    .button:focus {
-        outline: none;
-      }
+.card-3 {
+position: relative;
+z-index: 10;
+top: -31px;
+left: 7px;
+width: auto;
+height: 550px;
+opacity: .09;
+transform: skewY(-13deg);
+}
+
+.invisible-wall {
+margin: 0 auto;
+background-color: white;
+opacity: 0;
+z-index: 15;
+margin-top: -10%;
+height: 100%;
+width: 100vw;
+position: absolute;
+}
+
+.slider-buttons {
+display: flex;
+position: absolute;
+flex-direction: row;
+height: auto;
+width: 100%;
+justify-content: space-between;
+align-content: center;
+align-self: center;
+}
+
+.slider-buttons > button {
+border: none;
+background-color: unset;
+z-index: 20;
+
+}
+
+.button > img {
+height: 150px;
+width: 150px;
+}
+
+.button:focus {
+outline: none;
+}
 
 
-    .transition {
-        animation: slide-in 0.5s forwards;
-        -webkit-animation: slide-in 0.5s forwards;
-    }
+.transition {
+animation: slide-in 0.5s forwards;
+-webkit-animation: slide-in 0.5s forwards;
+}
 
-    #popup-container {
-        display: none;
-        /* margin-top: 1%; */
-        flex-direction: column;
-        width: 56vw;
-        height: 95vh;
-        background-color: #F8F8F8;
-        z-index: 100;
-        opacity: 0.98;
-        overflow-y: scroll;
-        /* border: solid 1px black; */
-        /* padding: 5px; */
-        /* align-self: center; */
-        /* margin: 0 auto; */
-        /* justify-self: center; */
-        /* left: -6%; */
-        position: relative;
-    }
+#popup-container {
+display: none;
+flex-direction: column;
+width: 56vw;
+height: 95vh;
+background-color: #F8F8F8;
+z-index: 100;
+opacity: 0.98;
+overflow-y: scroll;
+position: relative;
+}
 
-    .car-title {
-        text-align: center;
-    }
+.car-title {
+text-align: center;
+}
 
-    .photo-gallery-item {
-        width: 348px;
-        height: 242px;
-    }
+.photo-gallery-item {
+width: 348px;
+height: 242px;
+}
 
-    .mod-gallery-item {
-        width: 348px;
-        height: 348px;
-    }
+.mod-gallery-item {
+width: 348px;
+height: 348px;
+}
 
-    .photo-gallery-item:hover {
-        opacity: .5;
-    }
+.photo-gallery-item:hover {
+opacity: .5;
+}
 
-  
-    
-    .mod-gallery-item:hover {
-        opacity: .5;
-    }
 
-    .icon > img {
-        height: 125px;
-    }
 
-    .car-fact {
-        font-size: 22px;
-        padding: 25px;
-        text-align: center;
-    }
+.mod-gallery-item:hover {
+opacity: .5;
+}
 
-    /* .test {} */
+.icon > img {
+height: 125px;
+}
+
+.car-fact {
+font-size: 22px;
+padding: 25px;
+text-align: center;
+}
+
 }
